@@ -80,6 +80,7 @@ namespace Test_Lab_System
         {
 
             //database insert patient
+            //dfjdfbjdbfdj
             MySqlConnection conn = new MySqlConnection("server=localhost;database=testlabsystem;uid=root;pwd=root");
             MySqlCommand cmd = null;
             //string cmdString = "";
