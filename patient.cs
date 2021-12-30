@@ -14,6 +14,7 @@ namespace Test_Lab_System
 {
     public partial class patient : System.Windows.Forms.Form
     {
+        public static string textpassedForm2;
 
 
         public patient()
@@ -22,9 +23,11 @@ namespace Test_Lab_System
         }
         private void Form_Load(object sender, EventArgs e)
         {
-            panel1.BackColor = Color.FromArgb(100, 0, 0, 0);
-            panel2.BackColor = Color.FromArgb(160, 0, 0, 0);
-            panel3.BackColor = Color.FromArgb(160, 0, 0, 0);
+            //panel1.BackColor = Color.FromArgb(100, 0, 0, 0);
+            //panel2.BackColor = Color.FromArgb(160, 0, 0, 0);
+            //panel3.BackColor = Color.FromArgb(160, 0, 0, 0);
+            //textBox1.Text = AddAppointment.textpassedForm2;
+
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
@@ -81,7 +84,7 @@ namespace Test_Lab_System
 
             //database insert patient
             //dfjdfbjdbfdj
-            MySqlConnection conn = new MySqlConnection("server=localhost;database=testlabsystem;uid=root;pwd=root");
+            MySqlConnection conn = new MySqlConnection("server=localhost;database=testlabsystem;uid=root;pwd=123456789");
             MySqlCommand cmd = null;
             //string cmdString = "";
             conn.Open();
@@ -120,8 +123,9 @@ namespace Test_Lab_System
             conn.Close();
 
             MessageBox.Show("Data Stored Successfully");
-           
+            textpassedForm2 = textBox1.Text;
             }
+
 
         
         private void PatientID_TextChanged(object sender, EventArgs e)
@@ -134,6 +138,13 @@ namespace Test_Lab_System
             this.Hide();
             AddAppointment f2 = new AddAppointment();
             f2.Show();
+        }
+        private void Menu_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+            Registrar__Navigation_Screen r = new Registrar__Navigation_Screen();
+            r.Show();
         }
     }
 

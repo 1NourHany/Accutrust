@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+//clean version
 namespace Test_Lab_System
 {
     internal static class Program
@@ -16,7 +16,7 @@ namespace Test_Lab_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new patient());
+            Application.Run(new new_exising_patient());
         }
     }
 }

@@ -74,6 +74,12 @@
     <Compile Include="LogisticsMachines.Designer.cs">
       <DependentUpon>LogisticsMachines.cs</DependentUpon>
     </Compile>
+    <Compile Include="new_exising_patient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="new_exising_patient.Designer.cs">
+      <DependentUpon>new_exising_patient.cs</DependentUpon>
+    </Compile>
     <Compile Include="patient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,12 @@
     </Compile>
     <Compile Include="PurchaseOrder.Designer.cs">
       <DependentUpon>PurchaseOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registrar _Navigation_Screen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrar _Navigation_Screen.Designer.cs">
+      <DependentUpon>Registrar _Navigation_Screen.cs</DependentUpon>
     </Compile>
     <Compile Include="Results.cs">
       <SubType>Form</SubType>
@@ -119,6 +131,12 @@
     <Compile Include="TestPayment.Designer.cs">
       <DependentUpon>TestPayment.cs</DependentUpon>
     </Compile>
+    <Compile Include="View_Registration_Data.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View_Registration_Data.Designer.cs">
+      <DependentUpon>View_Registration_Data.cs</DependentUpon>
+    </Compile>
     <Compile Include="WriteReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LogisticsMachines.resx">
       <DependentUpon>LogisticsMachines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="new_exising_patient.resx">
+      <DependentUpon>new_exising_patient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="patient.resx">
       <DependentUpon>patient.cs</DependentUpon>
@@ -149,6 +170,9 @@
     <EmbeddedResource Include="PurchaseOrder.resx">
       <DependentUpon>PurchaseOrder.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Registrar _Navigation_Screen.resx">
+      <DependentUpon>Registrar _Navigation_Screen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Results.resx">
       <DependentUpon>Results.cs</DependentUpon>
     </EmbeddedResource>
@@ -163,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TestPayment.resx">
       <DependentUpon>TestPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_Registration_Data.resx">
+      <DependentUpon>View_Registration_Data.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WriteReport.resx">
       <DependentUpon>WriteReport.cs</DependentUpon>

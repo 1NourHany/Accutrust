@@ -21,5 +21,15 @@ namespace Test_Lab_System
         {
 
         }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TestPayment_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
