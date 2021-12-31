@@ -128,14 +128,11 @@ namespace Test_Lab_System
             searchData();
         }
 
-
         private void Menu_Click(object sender, EventArgs e)
         {
-
             this.Hide();
-            Registrar__Navigation_Screen r = new Registrar__Navigation_Screen();
-            r.Show();
+            Registrar__Navigation_Screen f2 = new Registrar__Navigation_Screen();
+            f2.Show();
         }
-
     }
 }

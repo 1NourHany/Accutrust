@@ -31,5 +31,20 @@ namespace Test_Lab_System
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+            CBCtest C = new CBCtest();
+            C.Show();
+        }
+
+        private void Menu_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Registrar__Navigation_Screen C = new Registrar__Navigation_Screen();
+            C.Show();
+        }
     }
 }

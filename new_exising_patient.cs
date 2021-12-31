@@ -89,6 +89,13 @@ namespace Test_Lab_System
         {
 
         }
+
+        private void Menu_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Registrar__Navigation_Screen f2 = new Registrar__Navigation_Screen();
+            f2.Show();
+        }
     }
 }
 

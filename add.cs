@@ -31,5 +31,10 @@ namespace Test_Lab_System
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

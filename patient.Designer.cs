@@ -54,6 +54,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -61,7 +62,12 @@
             this.InsuranceAddress = new System.Windows.Forms.TextBox();
             this.InsuranceNumber = new System.Windows.Forms.TextBox();
             this.SubscriberName = new System.Windows.Forms.TextBox();
-            this.Menu = new System.Windows.Forms.Button();
+            this.Lbl_DoBError = new System.Windows.Forms.Label();
+            this.Lbl_PhoneError = new System.Windows.Forms.Label();
+            this.Lbl_NIDError = new System.Windows.Forms.Label();
+            this.Lbl_LNameError = new System.Windows.Forms.Label();
+            this.Lbl_FNameError = new System.Windows.Forms.Label();
+            this.Lbl_IDError = new System.Windows.Forms.Label();
             panel3 = new System.Windows.Forms.Panel();
             panel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -84,7 +90,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.93701F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.06299F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 248F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 255F));
             this.tableLayoutPanel1.Controls.Add(this.EmergencyRelationship, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.Home, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.EmergencyName, 0, 5);
@@ -144,7 +150,7 @@
             // 
             this.EmergencyName.BackColor = System.Drawing.Color.White;
             this.EmergencyName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmergencyName.Location = new System.Drawing.Point(278, 200);
+            this.EmergencyName.Location = new System.Drawing.Point(274, 200);
             this.EmergencyName.Name = "EmergencyName";
             this.EmergencyName.Size = new System.Drawing.Size(181, 20);
             this.EmergencyName.TabIndex = 16;
@@ -154,7 +160,7 @@
             // 
             this.EmergencyPhone.BackColor = System.Drawing.Color.White;
             this.EmergencyPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmergencyPhone.Location = new System.Drawing.Point(512, 200);
+            this.EmergencyPhone.Location = new System.Drawing.Point(505, 200);
             this.EmergencyPhone.Name = "EmergencyPhone";
             this.EmergencyPhone.Size = new System.Drawing.Size(173, 20);
             this.EmergencyPhone.TabIndex = 15;
@@ -174,7 +180,7 @@
             // 
             this.Job.BackColor = System.Drawing.Color.White;
             this.Job.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Job.Location = new System.Drawing.Point(278, 160);
+            this.Job.Location = new System.Drawing.Point(274, 160);
             this.Job.Name = "Job";
             this.Job.Size = new System.Drawing.Size(173, 20);
             this.Job.TabIndex = 13;
@@ -184,7 +190,7 @@
             // 
             this.MotherName.BackColor = System.Drawing.Color.White;
             this.MotherName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MotherName.Location = new System.Drawing.Point(512, 160);
+            this.MotherName.Location = new System.Drawing.Point(505, 160);
             this.MotherName.Name = "MotherName";
             this.MotherName.Size = new System.Drawing.Size(173, 20);
             this.MotherName.TabIndex = 12;
@@ -194,7 +200,7 @@
             // 
             this.BloodType.BackColor = System.Drawing.Color.White;
             this.BloodType.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BloodType.Location = new System.Drawing.Point(278, 119);
+            this.BloodType.Location = new System.Drawing.Point(274, 119);
             this.BloodType.Name = "BloodType";
             this.BloodType.Size = new System.Drawing.Size(173, 20);
             this.BloodType.TabIndex = 11;
@@ -205,7 +211,7 @@
             // 
             this.DOB.BackColor = System.Drawing.Color.White;
             this.DOB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DOB.Location = new System.Drawing.Point(512, 119);
+            this.DOB.Location = new System.Drawing.Point(505, 119);
             this.DOB.Name = "DOB";
             this.DOB.Size = new System.Drawing.Size(173, 20);
             this.DOB.TabIndex = 10;
@@ -239,7 +245,7 @@
             this.LastName.BackColor = System.Drawing.Color.White;
             this.LastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LastName.ForeColor = System.Drawing.Color.Black;
-            this.LastName.Location = new System.Drawing.Point(278, 3);
+            this.LastName.Location = new System.Drawing.Point(274, 3);
             this.LastName.Name = "LastName";
             this.LastName.Size = new System.Drawing.Size(173, 20);
             this.LastName.TabIndex = 1;
@@ -249,7 +255,7 @@
             // 
             this.Gender.BackColor = System.Drawing.Color.White;
             this.Gender.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Gender.Location = new System.Drawing.Point(278, 38);
+            this.Gender.Location = new System.Drawing.Point(274, 38);
             this.Gender.Name = "Gender";
             this.Gender.Size = new System.Drawing.Size(173, 20);
             this.Gender.TabIndex = 4;
@@ -270,7 +276,7 @@
             // 
             this.NationalID.BackColor = System.Drawing.Color.White;
             this.NationalID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NationalID.Location = new System.Drawing.Point(278, 78);
+            this.NationalID.Location = new System.Drawing.Point(274, 78);
             this.NationalID.Name = "NationalID";
             this.NationalID.Size = new System.Drawing.Size(173, 20);
             this.NationalID.TabIndex = 5;
@@ -280,7 +286,7 @@
             // 
             this.MobileNumber.BackColor = System.Drawing.Color.White;
             this.MobileNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MobileNumber.Location = new System.Drawing.Point(512, 3);
+            this.MobileNumber.Location = new System.Drawing.Point(505, 3);
             this.MobileNumber.Name = "MobileNumber";
             this.MobileNumber.Size = new System.Drawing.Size(173, 20);
             this.MobileNumber.TabIndex = 6;
@@ -290,7 +296,7 @@
             // 
             this.Address.BackColor = System.Drawing.Color.White;
             this.Address.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Address.Location = new System.Drawing.Point(512, 38);
+            this.Address.Location = new System.Drawing.Point(505, 38);
             this.Address.Name = "Address";
             this.Address.Size = new System.Drawing.Size(173, 20);
             this.Address.TabIndex = 7;
@@ -300,7 +306,7 @@
             // 
             this.MaritalStatus.BackColor = System.Drawing.Color.White;
             this.MaritalStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaritalStatus.Location = new System.Drawing.Point(512, 78);
+            this.MaritalStatus.Location = new System.Drawing.Point(505, 78);
             this.MaritalStatus.Name = "MaritalStatus";
             this.MaritalStatus.Size = new System.Drawing.Size(173, 20);
             this.MaritalStatus.TabIndex = 8;
@@ -356,7 +362,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.Menu);
+            this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.tableLayoutPanel2);
@@ -364,6 +370,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(773, 88);
             this.panel2.TabIndex = 0;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(6, 52);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 9;
+            this.button3.Text = "Menu";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.Click_Menu);
             // 
             // button2
             // 
@@ -377,7 +393,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(21, 52);
+            this.button1.Location = new System.Drawing.Point(337, 52);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 7;
@@ -391,7 +407,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.28283F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.71717F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 196F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 198F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 205F));
             this.tableLayoutPanel2.Controls.Add(this.InsuranceCompany, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.InsuranceAddress, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.InsuranceNumber, 2, 0);
@@ -411,7 +427,7 @@
             this.InsuranceCompany.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InsuranceCompany.Location = new System.Drawing.Point(3, 3);
             this.InsuranceCompany.Name = "InsuranceCompany";
-            this.InsuranceCompany.Size = new System.Drawing.Size(199, 20);
+            this.InsuranceCompany.Size = new System.Drawing.Size(195, 20);
             this.InsuranceCompany.TabIndex = 0;
             this.InsuranceCompany.Text = "Insurance Company";
             // 
@@ -419,7 +435,7 @@
             // 
             this.InsuranceAddress.BackColor = System.Drawing.Color.White;
             this.InsuranceAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InsuranceAddress.Location = new System.Drawing.Point(387, 3);
+            this.InsuranceAddress.Location = new System.Drawing.Point(380, 3);
             this.InsuranceAddress.Name = "InsuranceAddress";
             this.InsuranceAddress.Size = new System.Drawing.Size(190, 20);
             this.InsuranceAddress.TabIndex = 1;
@@ -429,7 +445,7 @@
             // 
             this.InsuranceNumber.BackColor = System.Drawing.Color.White;
             this.InsuranceNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InsuranceNumber.Location = new System.Drawing.Point(583, 3);
+            this.InsuranceNumber.Location = new System.Drawing.Point(576, 3);
             this.InsuranceNumber.Name = "InsuranceNumber";
             this.InsuranceNumber.Size = new System.Drawing.Size(173, 20);
             this.InsuranceNumber.TabIndex = 6;
@@ -439,21 +455,11 @@
             // 
             this.SubscriberName.BackColor = System.Drawing.Color.White;
             this.SubscriberName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SubscriberName.Location = new System.Drawing.Point(208, 3);
+            this.SubscriberName.Location = new System.Drawing.Point(204, 3);
             this.SubscriberName.Name = "SubscriberName";
-            this.SubscriberName.Size = new System.Drawing.Size(173, 20);
+            this.SubscriberName.Size = new System.Drawing.Size(170, 20);
             this.SubscriberName.TabIndex = 7;
             this.SubscriberName.Text = "Subscriber Name";
-            // 
-            // Menu
-            // 
-            this.Menu.Location = new System.Drawing.Point(349, 52);
-            this.Menu.Name = "Menu";
-            this.Menu.Size = new System.Drawing.Size(75, 23);
-            this.Menu.TabIndex = 19;
-            this.Menu.Text = "Menu";
-            this.Menu.UseVisualStyleBackColor = true;
-            this.Menu.Click += new System.EventHandler(this.Menu_Click);
             // 
             // patient
             // 
@@ -515,7 +521,15 @@
         private System.Windows.Forms.TextBox Address;
         private System.Windows.Forms.TextBox MaritalStatus;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button Menu;
+        private System.Windows.Forms.Label Lbl_DoBError;
+        private System.Windows.Forms.Label Lbl_PhoneError;
+        private System.Windows.Forms.Label Lbl_NIDError;
+        private System.Windows.Forms.Label Lbl_LNameError;
+        private System.Windows.Forms.Label Lbl_FNameError;
+        private System.Windows.Forms.Label Lbl_IDError;
+        private System.Windows.Forms.Button button3;
+
+
     }
 }
 

@@ -12,6 +12,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -38,7 +40,32 @@
       <HintPath>C:\Program Files (x86)\MySQL\Connector NET 8.0\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Abstractions, Version=2.0.2.45, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\System.Configuration.Abstractions.2.0.2.45\lib\net45\System.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration.ConfigurationManager, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Configuration.ConfigurationManager.6.0.0\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.AccessControl.6.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Permissions.6.0.0\lib\net461\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,6 +75,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="add.cs">
@@ -67,6 +95,12 @@
     </Compile>
     <Compile Include="AdminView.Designer.cs">
       <DependentUpon>AdminView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CBC Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CBC Test.Designer.cs">
+      <DependentUpon>CBC Test.cs</DependentUpon>
     </Compile>
     <Compile Include="LogisticsMachines.cs">
       <SubType>Form</SubType>
@@ -119,12 +153,6 @@
     <Compile Include="SignIn.Designer.cs">
       <DependentUpon>SignIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="SignUp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SignUp.Designer.cs">
-      <DependentUpon>SignUp.cs</DependentUpon>
-    </Compile>
     <Compile Include="TestPayment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,11 +171,17 @@
     <Compile Include="WriteReport.Designer.cs">
       <DependentUpon>WriteReport.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="add.resx">
+      <DependentUpon>add.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddAppointment.resx">
       <DependentUpon>AddAppointment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminView.resx">
       <DependentUpon>AdminView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CBC Test.resx">
+      <DependentUpon>CBC Test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LogisticsMachines.resx">
       <DependentUpon>LogisticsMachines.cs</DependentUpon>
@@ -182,9 +216,6 @@
     <EmbeddedResource Include="SignIn.resx">
       <DependentUpon>SignIn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SignUp.resx">
-      <DependentUpon>SignUp.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="TestPayment.resx">
       <DependentUpon>TestPayment.cs</DependentUpon>
     </EmbeddedResource>
@@ -194,6 +225,28 @@
     <EmbeddedResource Include="WriteReport.resx">
       <DependentUpon>WriteReport.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include=".editorconfig" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\add.datasource" />
+    <None Include="Properties\DataSources\AddAppointment.datasource" />
+    <None Include="Properties\DataSources\AdminView.datasource" />
+    <None Include="Properties\DataSources\CBCtest.datasource" />
+    <None Include="Properties\DataSources\LogisticsMachines.datasource" />
+    <None Include="Properties\DataSources\new_exising_patient.datasource" />
+    <None Include="Properties\DataSources\patient.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\PurchaseOrder.datasource" />
+    <None Include="Properties\DataSources\Registrar__Navigation_Screen.datasource" />
+    <None Include="Properties\DataSources\Results.datasource" />
+    <None Include="Properties\DataSources\SignIn.datasource" />
+    <None Include="Properties\DataSources\SignUp.datasource" />
+    <None Include="Properties\DataSources\System_Lab_Test.S3.datasource" />
+    <None Include="Properties\DataSources\TestPayment.datasource" />
+    <None Include="Properties\DataSources\Test_Lab_System.Models.REGISTRATION.datasource" />
+    <None Include="Properties\DataSources\Test_Lab_System.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\Test_Lab_System.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\View_Registration_Data.datasource" />
+    <None Include="Properties\DataSources\WriteReport.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -208,4 +261,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets'))" />
+  </Target>
 </Project>
