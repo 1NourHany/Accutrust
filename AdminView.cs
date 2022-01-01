@@ -25,9 +25,17 @@ namespace Test_Lab_System
         private void AddPatient_CLick(object sender, EventArgs e)
         {
             this.Hide();
-            this.Close();
+            //this.Close();
             Registrar__Navigation_Screen f1 = new Registrar__Navigation_Screen();
             f1.Show();
+        }
+
+        private void Staff_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            //this.Close();
+            AddEmployee f3 = new AddEmployee();
+            f3.Show();
         }
     }
 }

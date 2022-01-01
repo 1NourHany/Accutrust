@@ -15,6 +15,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Test_Lab_System
 {
+
     public partial class patient : System.Windows.Forms.Form
     {
         public static string textpassedForm2;

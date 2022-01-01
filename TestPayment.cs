@@ -43,7 +43,7 @@ namespace Test_Lab_System
         private void Menu_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Registrar__Navigation_Screen C = new Registrar__Navigation_Screen();
+            SignIn C = new SignIn();
             C.Show();
         }
     }

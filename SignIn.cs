@@ -61,7 +61,7 @@ namespace Test_Lab_System
                 else if (comboBox1.Text == "Finance Staff")
                 {
                     this.Hide();
-                    this.Close();
+                    //this.Close();
                     TestPayment f5 = new TestPayment();
                     f5.Show();
                 }
@@ -74,7 +74,7 @@ namespace Test_Lab_System
                 else if (comboBox1.Text == "Doctor")
                 {
                     this.Hide();
-                    Results f7 = new Results();
+                    DoctorView f7 = new DoctorView();
                     f7.Show();
                 }
 

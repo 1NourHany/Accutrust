@@ -21,5 +21,13 @@ namespace Test_Lab_System
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            //this.Close();
+            CBCtest f3 = new CBCtest();
+            f3.Show();
+        }
     }
 }

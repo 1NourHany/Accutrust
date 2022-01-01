@@ -93,7 +93,7 @@ namespace Test_Lab_System
             //cmd.Parameters.AddWithValue("@param1", this.AppointmentID.Text);
             cmd.Parameters.AddWithValue("@param2", this.dateTimePicker1.Text);
             cmd.Parameters.AddWithValue("@param3", this.dateTimePicker2.Text);
-            cmd.Parameters.AddWithValue("@param4", patient.textpassedForm2);
+            cmd.Parameters.AddWithValue("@param4", this.PatientID.Text);
             cmd.ExecuteNonQuery();
             conn.Close();
 
@@ -133,6 +133,11 @@ namespace Test_Lab_System
             this.Hide();
             Registrar__Navigation_Screen f2 = new Registrar__Navigation_Screen();
             f2.Show();
+        }
+
+        private void PatientID_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

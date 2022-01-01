@@ -35,6 +35,12 @@ namespace Test_Lab_System
         {
         }
 
+        private void Menu_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AdminView f2 = new AdminView();
+            f2.Show();
+        }
     }
     
 }

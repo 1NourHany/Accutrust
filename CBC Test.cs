@@ -77,5 +77,17 @@ namespace Test_Lab_System
             Registrar__Navigation_Screen f2 = new Registrar__Navigation_Screen();
             f2.Show();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Done_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SignIn f2 = new SignIn();
+            f2.Show();
+        }
     }
 }
