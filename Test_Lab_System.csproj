@@ -90,6 +90,12 @@
     <Compile Include="AddAppointment.Designer.cs">
       <DependentUpon>AddAppointment.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEmployee.Designer.cs">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,12 +108,19 @@
     <Compile Include="CBC Test.Designer.cs">
       <DependentUpon>CBC Test.cs</DependentUpon>
     </Compile>
+    <Compile Include="DoctorView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorView.Designer.cs">
+      <DependentUpon>DoctorView.cs</DependentUpon>
+    </Compile>
     <Compile Include="LogisticsMachines.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LogisticsMachines.Designer.cs">
       <DependentUpon>LogisticsMachines.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Employee.cs" />
     <Compile Include="new_exising_patient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,11 +190,17 @@
     <EmbeddedResource Include="AddAppointment.resx">
       <DependentUpon>AddAppointment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddEmployee.resx">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminView.resx">
       <DependentUpon>AdminView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CBC Test.resx">
       <DependentUpon>CBC Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorView.resx">
+      <DependentUpon>DoctorView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LogisticsMachines.resx">
       <DependentUpon>LogisticsMachines.cs</DependentUpon>

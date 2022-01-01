@@ -28,13 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registrar__Navigation_Screen));
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.ViewData = new System.Windows.Forms.Button();
             this.OrderTest = new System.Windows.Forms.Button();
             this.Appointment = new System.Windows.Forms.Button();
             this.NewPatient = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // vScrollBar1
@@ -99,9 +102,19 @@
             this.NewPatient.Name = "NewPatient";
             this.NewPatient.Size = new System.Drawing.Size(113, 54);
             this.NewPatient.TabIndex = 3;
-            this.NewPatient.Text = "New Patient";
+            this.NewPatient.Text = "Add Patient";
             this.NewPatient.UseVisualStyleBackColor = false;
             this.NewPatient.Click += new System.EventHandler(this.NewPatient_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(170, 28);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(618, 400);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // Registrar__Navigation_Screen
             // 
@@ -109,11 +122,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.Name = "Registrar__Navigation_Screen";
             this.Text = "Registrar__Navigation_Screen";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Registrar__Navigation_Screen_FormClosed);
             this.Load += new System.EventHandler(this.Registrar__Navigation_Screen_Load);
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -126,5 +142,6 @@
         private System.Windows.Forms.Button OrderTest;
         private System.Windows.Forms.Button Appointment;
         private System.Windows.Forms.Button ViewData;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

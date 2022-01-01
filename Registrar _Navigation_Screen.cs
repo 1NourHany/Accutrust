@@ -22,7 +22,7 @@ namespace Test_Lab_System
         private void NewPatient_Click(object sender, EventArgs e)
         {
             this.Hide();
-            patient p = new patient();
+            new_exising_patient p = new new_exising_patient();
             p.Show();
         }
         private void Appointment_Click(object sender, EventArgs e)
@@ -50,6 +50,12 @@ namespace Test_Lab_System
         private void Registrar__Navigation_Screen_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void Registrar__Navigation_Screen_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+            System.Windows.Forms.Application.ExitThread();
         }
     }
 }

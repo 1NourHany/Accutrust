@@ -87,13 +87,13 @@ namespace Test_Lab_System
             //database insert patient
             //dfjdfbjdbfdj
 
-            
+
             REGISTRATION Registration = new REGISTRATION();
             Registration.PatientID = textBox1.Text;
             Registration.PatientFirstName = FirstName.Text;
             Registration.PatientLastName = LastName.Text;
             Registration.PatientAge = Age.Text;
-            Registration.PatientGender = Gender.Text;
+            Registration.PatientGender = gender.Text;
             Registration.PatientMobilePhone = MobileNumber.Text;
             Registration.PatientNationalID = NationalID.Text;
             Registration.PatientAddress = Address.Text;
@@ -123,96 +123,92 @@ namespace Test_Lab_System
                     switch (item.MemberNames.First())
                     {
                         case "PatientID":
-                            Lbl_IDError.Text = item.ErrorMessage;
-                            Lbl_IDError.ForeColor = Color.Red;
+                            Lbl_PatientIDError.Text = item.ErrorMessage;
+                            Lbl_PatientIDError.ForeColor = Color.Red;
                             break;
                         case "PatientFirstName":
-                            Lbl_IDError.Text = item.ErrorMessage;
-                            Lbl_IDError.ForeColor = Color.Red;
+                            Lbl_FNameError.Text = item.ErrorMessage;
+                            Lbl_FNameError.ForeColor = Color.Red;
                             break;
                         case "PatientLastName":
-                            Lbl_IDError.Text = item.ErrorMessage;
-                            Lbl_IDError.ForeColor = Color.Red;
+                            Lbl_LNameError.Text = item.ErrorMessage;
+                            Lbl_LNameError.ForeColor = Color.Red;
                             break;
                         case "PatientAge":
-                            Lbl_IDError.Text = item.ErrorMessage;
-                            Lbl_IDError.ForeColor = Color.Red;
+                            Lbl_AgeError.Text = item.ErrorMessage;
+                            Lbl_AgeError.ForeColor = Color.Red;
                             break;
                         case "PatientGender":
-                            Lbl_NIDError.Text = item.ErrorMessage;
-                            Lbl_IDError.ForeColor = Color.Red;
+                            Lbl_GenderError.Text = item.ErrorMessage;
+                            Lbl_GenderError.ForeColor = Color.Red;
                             break;
                         case "PatientMobilePhone":
-                            Lbl_IDError.Text = item.ErrorMessage;
-                            Lbl_IDError.ForeColor = Color.Red;
+                            Lbl_MobileNumberError.Text = item.ErrorMessage;
+                            Lbl_MobileNumberError.ForeColor = Color.Red;
                             break;
                         case "PatientNationalID":
-                            Lbl_IDError.Text = item.ErrorMessage;
-                            Lbl_IDError.ForeColor = Color.Red;
+                            Lbl_NationalIDError.Text = item.ErrorMessage;
+                            Lbl_NationalIDError.ForeColor = Color.Red;
                             break;
                         case "PatientMaritalStatus":
-                            Lbl_IDError.Text = item.ErrorMessage;
-                            Lbl_IDError.ForeColor = Color.Red;
+                            Lbl_MaritalStatusError.Text = item.ErrorMessage;
+                            Lbl_MaritalStatusError.ForeColor = Color.Red;
                             break;
                         case "PatientBloodType":
-                            Lbl_IDError.Text = item.ErrorMessage;
-                            Lbl_IDError.ForeColor = Color.Red;
+                            Lbl_BloodTypeError.Text = item.ErrorMessage;
+                            Lbl_BloodTypeError.ForeColor = Color.Red;
                             break;
                         case "PatientNationality":
-                            Lbl_IDError.Text = item.ErrorMessage;
-                            Lbl_IDError.ForeColor = Color.Red;
+                            LblNationality_Error.Text = item.ErrorMessage;
+                            LblNationality_Error.ForeColor = Color.Red;
                             break;
                         case "PatientEmail":
-                            Lbl_IDError.Text = item.ErrorMessage;
-                            Lbl_IDError.ForeColor = Color.Red;
-                            break;
-                        case "PatientDOB":
-                            Lbl_IDError.Text = item.ErrorMessage;
-                            Lbl_IDError.ForeColor = Color.Red;
+                            Lbl_EmailError.Text = item.ErrorMessage;
+                            Lbl_EmailError.ForeColor = Color.Red;
                             break;
                         case "PatientJob":
-                            Lbl_IDError.Text = item.ErrorMessage;
-                            Lbl_IDError.ForeColor = Color.Red;
+                            Lbl_JobError.Text = item.ErrorMessage;
+                            Lbl_JobError.ForeColor = Color.Red;
                             break;
                         case "PatientMotherName":
-                            Lbl_IDError.Text = item.ErrorMessage;
-                            Lbl_IDError.ForeColor = Color.Red; 
+                            Lbl_MotherNameError.Text = item.ErrorMessage;
+                            Lbl_MotherNameError.ForeColor = Color.Red;
                             break;
                         case "InsuranceCompany":
-                            Lbl_IDError.Text = item.ErrorMessage;
-                            Lbl_IDError.ForeColor = Color.Red;
+                            Lbl_InsuranceCompanyError.Text = item.ErrorMessage;
+                            Lbl_InsuranceCompanyError.ForeColor = Color.Red;
                             break;
                         case "InsuranceAddress":
-                            Lbl_IDError.Text = item.ErrorMessage;
-                            Lbl_IDError.ForeColor = Color.Red;
+                            Lbl_InsuranceAddressError.Text = item.ErrorMessage;
+                            Lbl_InsuranceAddressError.ForeColor = Color.Red;
                             break;
                         case "InsurancePhone":
-                            Lbl_IDError.Text = item.ErrorMessage;
-                            Lbl_IDError.ForeColor = Color.Red;
+                            Lbl_InsurancePhoneError.Text = item.ErrorMessage;
+                            Lbl_InsurancePhoneError.ForeColor = Color.Red;
                             break;
                         case "InsuranceSubscriberName":
-                            Lbl_IDError.Text = item.ErrorMessage;
-                            Lbl_IDError.ForeColor = Color.Red;
+                            Lbl_SubscriberNameError.Text = item.ErrorMessage;
+                            Lbl_SubscriberNameError.ForeColor = Color.Red;
                             break;
                         case "PatientHomePhone":
-                            Lbl_IDError.Text = item.ErrorMessage;
-                            Lbl_IDError.ForeColor = Color.Red;
+                            Lbl_HomeError.Text = item.ErrorMessage;
+                            Lbl_HomeError.ForeColor = Color.Red;
                             break;
                         case "EmergencyContactName":
-                            Lbl_IDError.Text = item.ErrorMessage;
-                            Lbl_IDError.ForeColor = Color.Red;
+                            Lbl_EmergencyNameError.Text = item.ErrorMessage;
+                            Lbl_EmergencyNameError.ForeColor = Color.Red;
                             break;
                         case "EmergencyContactMobile":
-                            Lbl_IDError.Text = item.ErrorMessage;
-                            Lbl_IDError.ForeColor = Color.Red;
+                            Lbl_EmergencyPhoneError.Text = item.ErrorMessage;
+                            Lbl_EmergencyPhoneError.ForeColor = Color.Red;
                             break;
                         case "EmergencyContactRelationship":
-                            Lbl_IDError.Text = item.ErrorMessage;
-                            Lbl_IDError.ForeColor = Color.Red;
+                            Lbl_EmergencyRelationshipError.Text = item.ErrorMessage;
+                            Lbl_EmergencyRelationshipError.ForeColor = Color.Red;
                             break;
                         case "PatientAddress":
-                            Lbl_IDError.Text = item.ErrorMessage;
-                            Lbl_IDError.ForeColor = Color.Red;
+                            Lbl_AddressError.Text = item.ErrorMessage;
+                            Lbl_AddressError.ForeColor = Color.Red;
                             break;
                         default:
                             MessageBox.Show(item.ErrorMessage);
@@ -303,19 +299,16 @@ namespace Test_Lab_System
 
 
         private void PatientID_TextChanged(object sender, EventArgs e)
-                    {
+        {
 
-                    }
+        }
 
-                    private void button2_Click(object sender, EventArgs e)
-                    {
-                        this.Hide();
-                        AddAppointment f2 = new AddAppointment();
-                        f2.Show();
-                    }
-                    private void Menu_Click(object sender, EventArgs e)
-                    {
-                    }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AddAppointment f2 = new AddAppointment();
+            f2.Show();
+        }
 
         private void Click_Menu(object sender, EventArgs e)
         {
@@ -323,8 +316,55 @@ namespace Test_Lab_System
             Registrar__Navigation_Screen f2 = new Registrar__Navigation_Screen();
             f2.Show();
         }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Fname_keypress(object sender, KeyPressEventArgs e)
+        {
+            FirstName.MaxLength = 10;
+        }
+
+        private void mobile_keypress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            MobileNumber.MaxLength = 11;
+        }
+
+        private void Lname_keypress(object sender, KeyPressEventArgs e)
+        {
+            LastName.MaxLength = 10;
+        }
+
+        private void Address_keypress(object sender, KeyPressEventArgs e)
+        {
+            LastName.MaxLength = 40;
+        }
+
+        private void Age_keypress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            Age.MaxLength = 2; 
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 
-   
-}
 
+}

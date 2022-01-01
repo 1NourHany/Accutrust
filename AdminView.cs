@@ -16,5 +16,18 @@ namespace Test_Lab_System
         {
             InitializeComponent();
         }
+
+        private void AdminView_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddPatient_CLick(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.Close();
+            Registrar__Navigation_Screen f1 = new Registrar__Navigation_Screen();
+            f1.Show();
+        }
     }
 }

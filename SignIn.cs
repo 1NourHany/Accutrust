@@ -31,9 +31,9 @@ namespace Test_Lab_System
         {
 
         }
-        public void searchData(string valueToSearch , string valueToSearch2)
+        public void searchData(string valueToSearch , string valueToSearch2, string valueToSearch3)
         {
-            string query = "SELECT * FROM EMPLOYEE WHERE CONCAT(EmployeeEmail, EmployeePassword) like '%" + valueToSearch + valueToSearch2 + "%'";
+            string query = "SELECT * FROM EMPLOYEE WHERE CONCAT(EmployeeEmail, EmployeePassword,EmployeePosition) like '%" + valueToSearch + valueToSearch2 + valueToSearch3+ "%'";
 
             command = new MySqlCommand(query, connection);
             adapter = new MySqlDataAdapter(command);
@@ -43,34 +43,62 @@ namespace Test_Lab_System
 
             if (dataGridView1.Rows.Count > 1)
             {
-                MessageBox.Show("Email and Password are valid.");                
+                MessageBox.Show("Email and Password and Title are valid.");
+                if (comboBox1.Text == "Admin")
+                {
                 this.Hide();
-                new_exising_patient f4 = new new_exising_patient();
-                f4.Show();
+                 //this.Close();
+                AdminView f1 = new AdminView();
+                f1.Show();
+                }
+                else if (comboBox1.Text == "Registrar")
+                {
+                    this.Hide();
+                 //   this.Close();
+                    Registrar__Navigation_Screen f4 = new Registrar__Navigation_Screen();
+                    f4.Show();
+                }
+                else if (comboBox1.Text == "Finance Staff")
+                {
+                    this.Hide();
+                    this.Close();
+                    TestPayment f5 = new TestPayment();
+                    f5.Show();
+                }
+                else if (comboBox1.Text == "Logistics Staff")
+                {
+                    this.Hide();
+                    PurchaseOrder f6 = new PurchaseOrder();
+                    f6.Show();
+                }
+                else if (comboBox1.Text == "Doctor")
+                {
+                    this.Hide();
+                    Results f7 = new Results();
+                    f7.Show();
+                }
 
             }
             else
             {
-                MessageBox.Show("Email or Password  is incorrect,please try again!");
+                MessageBox.Show("Email or Password or Title is incorrect,please try again!");
                 textemail.Clear();
                 textpassword.Clear();
                 textemail.Focus();
 
-            }
-        }
 
-        private void BTN_SEARCH_Click(object sender, EventArgs e)
-        {
-            string valueToSearch = textemail.Text.ToString();
-            string valueToSearch2 = textpassword.Text.ToString();
-            searchData(valueToSearch, valueToSearch2);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             string valueToSearch = textemail.Text.ToString();
             string valueToSearch2 = textpassword.Text.ToString();
-            searchData(valueToSearch, valueToSearch2);
+            string valueToSearch3 = comboBox1.Text.ToString();
+            searchData(valueToSearch, valueToSearch2, valueToSearch3);
+
+
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -86,6 +114,17 @@ namespace Test_Lab_System
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void title_click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Signin_Closed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+            System.Windows.Forms.Application.ExitThread();
         }
     }
 }
