@@ -17,35 +17,35 @@ namespace Test_Lab_System.Models
 {
     internal class Employee
     { 
-        [Required(ErrorMessage = "ID is required")]
+        //[Required(ErrorMessage = "ID is required")]
         public string EmployeeID { get; set; }
-        [StringLength(10)]
-        [RegularExpression(@"^([A-Z][a-z-A-z]+)$", ErrorMessage = "Please enter a valid Name")]
+        //[StringLength(10)]
+        //[RegularExpression(@"^([A-Z][a-z-A-z]+)$", ErrorMessage = "Please enter a valid Name")]
         public string EmployeeName { get; set; }
         public string EmployeeAge { get; set; }
-        [StringLength(10)]
+        //[StringLength(10)]
         public string EmployeeGender { get; set; }
-        [RegularExpression("(01)[0-9]{9}", ErrorMessage = "Please enter a valid Mobile Phone")]
+        //[RegularExpression("(01)[0-9]{9}", ErrorMessage = "Please enter a valid Mobile Phone")]
         [DataType(DataType.PhoneNumber)]
         public string EmployeePhone { get; set; }
         [Required]
-        [RegularExpression("^([1-9]{1}[0-9]{2}(0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1])[0-9]{2}[0-9]{5})$", ErrorMessage = "Please enter a valid Natinal ID")]
+        //[RegularExpression("^([1-9]{1}[0-9]{2}(0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1])[0-9]{2}[0-9]{5})$", ErrorMessage = "Please enter a valid Natinal ID")]
         public string EmployeeNationalID { get; set; }
-        [StringLength(10)]
+        //[StringLength(10)]
         [Required]
         public string EmployeeMaritalStatus { get; set; }
         [Required]
         public string EmployeeSupervisor { get; set; }
         [Required]
         public string EmployeeNationality { get; set; }
-        [StringLength(50)]
+       // [StringLength(50)]
         [Required]
-        [RegularExpression(@"^\w+[\w-\.]+\@\w{5}\.[a-z](2,3)$", ErrorMessage = "Please enter" + "\n a valid Email")]
+       // [RegularExpression(@"^\w+[\w-\.]+\@\w{5}\.[a-z](2,3)$", ErrorMessage = "Please enter" + "\n a valid Email")]
         public string EmployeeEmail { get; set; }
         [Required]
         public string EmployeeDB { get; set; }
 
-        [StringLength(10)]
+        //[StringLength(10)]
         [Required]
         public string EmployeeSalary { get; set; }
         [Required]

@@ -37,5 +37,10 @@ namespace Test_Lab_System
             AddEmployee f3 = new AddEmployee();
             f3.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

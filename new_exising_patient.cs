@@ -30,9 +30,9 @@ namespace Test_Lab_System
         private void button1_Click(object sender, EventArgs e)
         {
 
-            this.Hide();
-            AddAppointment f2 = new AddAppointment();
-            f2.Show();
+            //this.Hide();
+           // AddAppointment f2 = new AddAppointment();
+            //f2.Show();
         }
         public void searchData(string valueToSearch)
         {
@@ -47,6 +47,9 @@ namespace Test_Lab_System
             {
                MessageBox.Show("Patient ID is found");
 
+                this.Hide();
+                AddAppointment f4 = new AddAppointment(textBox1.Text);
+                f4.Show();
             }
             else
             {

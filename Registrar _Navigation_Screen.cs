@@ -28,9 +28,9 @@ namespace Test_Lab_System
         private void Appointment_Click(object sender, EventArgs e)
         {
 
-            this.Hide();
-            AddAppointment A = new AddAppointment();
-            A.Show();
+            //this.Hide();
+            //AddAppointment A = new AddAppointment();
+            //A.Show();
         }
         private void OrderTest_Click(object sender, EventArgs e)
         {

@@ -12,9 +12,15 @@ namespace Test_Lab_System
 {
     public partial class CBCtest : Form
     {
-        public CBCtest()
+        public CBCtest(string msg1, string msg2, string msg3, string msg4, string msg5, string msg7)
         {
             InitializeComponent();
+            AppDate.Text = msg1;
+            ReportDate.Text = msg2;
+            PhysicianName.Text = msg3;
+            PatientName.Text = msg4;
+            PatientID.Text = msg5;
+            PatientAge.Text = msg7;
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -88,6 +94,11 @@ namespace Test_Lab_System
             this.Hide();
             SignIn f2 = new SignIn();
             f2.Show();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

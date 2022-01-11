@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 using MySql.Data.MySqlClient;
-
+using System.ComponentModel.DataAnnotations;
 namespace Test_Lab_System
 {
 
@@ -21,9 +21,10 @@ namespace Test_Lab_System
         MySqlDataAdapter adapter;
         DataTable table;
         //public static string textpassedForm2;
-        public AddAppointment()
+        public AddAppointment(string msg)
         {
             InitializeComponent();
+            textBox2.Text = msg;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -38,7 +39,7 @@ namespace Test_Lab_System
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+           
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -74,33 +75,46 @@ namespace Test_Lab_System
             this.monthCalendar1.ShowToday = true;
             this.monthCalendar1.ShowTodayCircle = true;
             this.monthCalendar1.ShowWeekNumbers = true;
-        
+
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            
 
-
+            Appointments appointments = new Appointments();
+            appointments.AppointmentDate = dateTimePicker1.Text;
+            appointments.Appointmenttime = dateTimePicker2.Text;
+            appointments.PatientID = textBox2.Text;
             MySqlConnection conn = new MySqlConnection("server=localhost;database=testlabsystem;uid=root;pwd=123456789");
             MySqlCommand cmd = null;
+            
             //string cmdString = "";
             conn.Open();
-            string cmdString = "insert into APPOINTMENT( AppointmentID, AppointmentDate, Appointmenttime, PatientID) " +
-                "values(TO_BASE64(RANDOM_BYTES(5)), @param2 , @param3  , @param4 );";
-            cmd = new MySqlCommand(cmdString, conn);
-            //Add paramter values
-            //cmd.Parameters.AddWithValue("@param1", this.AppointmentID.Text);
-            cmd.Parameters.AddWithValue("@param2", this.dateTimePicker1.Text);
-            cmd.Parameters.AddWithValue("@param3", this.dateTimePicker2.Text);
-            cmd.Parameters.AddWithValue("@param4", this.PatientID.Text);
-            cmd.ExecuteNonQuery();
-            conn.Close();
+            //using (MySqlConnection conn = new MySqlConnection("server=localhost;database=testlabsystem;uid=root;pwd=123456789"))
+            //{
+            //  conn.Open();
+            // try
+            //{
 
+            string cmdString = "insert into APPOINTMENT(AppointmentID, AppointmentDate, Appointmenttime, PatientID)values(TO_BASE64(RANDOM_BYTES(5)), @param2 , @param3  , @param4);";
+
+            cmd = new MySqlCommand(cmdString, conn);
+
+            cmd.Parameters.Add("@param2", MySqlDbType.VarChar);
+            cmd.Parameters["@param2"].Value = appointments.AppointmentDate.ToString();
+            cmd.Parameters.Add("@param3", MySqlDbType.VarChar);
+            cmd.Parameters["@param3"].Value = appointments.Appointmenttime.ToString();
+            cmd.Parameters.Add("@param4", MySqlDbType.VarChar);
+            cmd.Parameters["@param4"].Value = appointments.PatientID.ToString();
+
+            MySqlDataAdapter adp = new MySqlDataAdapter();
+            adp.InsertCommand = cmd;
+            adp.InsertCommand.ExecuteNonQuery();
             MessageBox.Show("Data Stored Successfully");
 
-        }
 
+        }
+    
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
@@ -139,5 +153,8 @@ namespace Test_Lab_System
         {
 
         }
+        
+
+       
     }
 }

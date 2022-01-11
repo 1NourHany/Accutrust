@@ -33,7 +33,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.label81 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -139,18 +138,16 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.PatientAge = new System.Windows.Forms.TextBox();
+            this.PatientID = new System.Windows.Forms.TextBox();
+            this.ReportDate = new System.Windows.Forms.TextBox();
+            this.PhysicianName = new System.Windows.Forms.TextBox();
+            this.PatientName = new System.Windows.Forms.TextBox();
+            this.AppDate = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -193,40 +190,28 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Controls.Add(this.textBox18);
             this.groupBox1.Controls.Add(this.textBox17);
             this.groupBox1.Controls.Add(this.label81);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.PatientAge);
+            this.groupBox1.Controls.Add(this.PatientID);
+            this.groupBox1.Controls.Add(this.ReportDate);
+            this.groupBox1.Controls.Add(this.PhysicianName);
+            this.groupBox1.Controls.Add(this.PatientName);
+            this.groupBox1.Controls.Add(this.AppDate);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Location = new System.Drawing.Point(87, 0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(655, 697);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
-            // 
-            // textBox18
-            // 
-            this.textBox18.Location = new System.Drawing.Point(664, 141);
-            this.textBox18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox18.Multiline = true;
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(232, 132);
-            this.textBox18.TabIndex = 188;
-            this.textBox18.Text = "Notes";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // textBox17
             // 
@@ -1323,19 +1308,10 @@
             this.label7.TabIndex = 14;
             this.label7.Text = "Patient\'s Name";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(449, 65);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(80, 13);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Appointment ID";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(449, 95);
+            this.label5.Location = new System.Drawing.Point(449, 69);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 13);
             this.label5.TabIndex = 12;
@@ -1368,54 +1344,47 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Appointment Date";
             // 
-            // textBox7
+            // PatientAge
             // 
-            this.textBox7.Location = new System.Drawing.Point(547, 88);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 7;
+            this.PatientAge.Location = new System.Drawing.Point(547, 62);
+            this.PatientAge.Name = "PatientAge";
+            this.PatientAge.Size = new System.Drawing.Size(100, 20);
+            this.PatientAge.TabIndex = 7;
             // 
-            // textBox6
+            // PatientID
             // 
-            this.textBox6.Location = new System.Drawing.Point(547, 36);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 6;
+            this.PatientID.Location = new System.Drawing.Point(547, 36);
+            this.PatientID.Name = "PatientID";
+            this.PatientID.Size = new System.Drawing.Size(100, 20);
+            this.PatientID.TabIndex = 6;
             // 
-            // textBox5
+            // ReportDate
             // 
-            this.textBox5.Location = new System.Drawing.Point(547, 62);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 5;
+            this.ReportDate.Location = new System.Drawing.Point(247, 36);
+            this.ReportDate.Name = "ReportDate";
+            this.ReportDate.Size = new System.Drawing.Size(100, 20);
+            this.ReportDate.TabIndex = 4;
             // 
-            // textBox4
+            // PhysicianName
             // 
-            this.textBox4.Location = new System.Drawing.Point(247, 36);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 4;
+            this.PhysicianName.Location = new System.Drawing.Point(247, 60);
+            this.PhysicianName.Name = "PhysicianName";
+            this.PhysicianName.Size = new System.Drawing.Size(100, 20);
+            this.PhysicianName.TabIndex = 3;
             // 
-            // textBox3
+            // PatientName
             // 
-            this.textBox3.Location = new System.Drawing.Point(247, 60);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 3;
+            this.PatientName.Location = new System.Drawing.Point(547, 10);
+            this.PatientName.Name = "PatientName";
+            this.PatientName.Size = new System.Drawing.Size(100, 20);
+            this.PatientName.TabIndex = 2;
             // 
-            // textBox2
+            // AppDate
             // 
-            this.textBox2.Location = new System.Drawing.Point(547, 10);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 2;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(247, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.AppDate.Location = new System.Drawing.Point(247, 13);
+            this.AppDate.Name = "AppDate";
+            this.AppDate.Size = new System.Drawing.Size(100, 20);
+            this.AppDate.TabIndex = 1;
             // 
             // pictureBox1
             // 
@@ -1555,23 +1524,20 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox PatientAge;
+        private System.Windows.Forms.TextBox PatientID;
+        private System.Windows.Forms.TextBox ReportDate;
+        private System.Windows.Forms.TextBox PhysicianName;
+        private System.Windows.Forms.TextBox PatientName;
+        private System.Windows.Forms.TextBox AppDate;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label81;
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox18;
     }
 }

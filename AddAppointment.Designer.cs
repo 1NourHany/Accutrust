@@ -42,7 +42,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.PatientID = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -158,7 +158,7 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.Black;
-            this.button7.Location = new System.Drawing.Point(341, 384);
+            this.button7.Location = new System.Drawing.Point(339, 384);
             this.button7.Margin = new System.Windows.Forms.Padding(5);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(103, 24);
@@ -176,7 +176,7 @@
             this.dateTimePicker2.CalendarTrailingForeColor = System.Drawing.Color.Red;
             this.dateTimePicker2.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker2.Location = new System.Drawing.Point(308, 97);
+            this.dateTimePicker2.Location = new System.Drawing.Point(177, 98);
             this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(5);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(122, 20);
@@ -198,10 +198,10 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(639, 94);
+            this.button2.Location = new System.Drawing.Point(639, 98);
             this.button2.Margin = new System.Windows.Forms.Padding(5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(70, 29);
+            this.button2.Size = new System.Drawing.Size(70, 25);
             this.button2.TabIndex = 17;
             this.button2.Text = "Show";
             this.button2.UseVisualStyleBackColor = false;
@@ -227,7 +227,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(519, 384);
+            this.button3.Location = new System.Drawing.Point(539, 384);
             this.button3.Margin = new System.Windows.Forms.Padding(5);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(106, 24);
@@ -236,13 +236,15 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.Menu_Click);
             // 
-            // PatientID
+            // textBox2
             // 
-            this.PatientID.Location = new System.Drawing.Point(179, 97);
-            this.PatientID.Name = "PatientID";
-            this.PatientID.Size = new System.Drawing.Size(95, 29);
-            this.PatientID.TabIndex = 19;
-            this.PatientID.TextChanged += new System.EventHandler(this.PatientID_TextChanged);
+            this.textBox2.BackColor = System.Drawing.Color.White;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(414, 97);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(120, 20);
+            this.textBox2.TabIndex = 20;
+            this.textBox2.Text = " ";
             // 
             // AddAppointment
             // 
@@ -251,7 +253,7 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.PatientID);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
@@ -290,7 +292,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox PatientID;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
 

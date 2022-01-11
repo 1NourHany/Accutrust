@@ -114,13 +114,16 @@
     <Compile Include="DoctorView.Designer.cs">
       <DependentUpon>DoctorView.cs</DependentUpon>
     </Compile>
-    <Compile Include="LogisticsMachines.cs">
+    <Compile Include="Endocrinology.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LogisticsMachines.Designer.cs">
-      <DependentUpon>LogisticsMachines.cs</DependentUpon>
+    <Compile Include="Endocrinology.Designer.cs">
+      <DependentUpon>Endocrinology.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Appointments.cs" />
     <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\TESTPAYMENT.cs" />
+    <Compile Include="Models\TESTS.cs" />
     <Compile Include="new_exising_patient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +157,30 @@
     <Compile Include="Results.Designer.cs">
       <DependentUpon>Results.cs</DependentUpon>
     </Compile>
+    <Compile Include="s11.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="s11.Designer.cs">
+      <DependentUpon>s11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S12.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="S12.Designer.cs">
+      <DependentUpon>S12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="s13.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="s13.Designer.cs">
+      <DependentUpon>s13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="s14.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="s14.Designer.cs">
+      <DependentUpon>s14.cs</DependentUpon>
+    </Compile>
     <Compile Include="S3.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +198,12 @@
     </Compile>
     <Compile Include="TestPayment.Designer.cs">
       <DependentUpon>TestPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestsQuestions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestsQuestions.Designer.cs">
+      <DependentUpon>TestsQuestions.cs</DependentUpon>
     </Compile>
     <Compile Include="View_Registration_Data.cs">
       <SubType>Form</SubType>
@@ -202,8 +235,8 @@
     <EmbeddedResource Include="DoctorView.resx">
       <DependentUpon>DoctorView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LogisticsMachines.resx">
-      <DependentUpon>LogisticsMachines.cs</DependentUpon>
+    <EmbeddedResource Include="Endocrinology.resx">
+      <DependentUpon>Endocrinology.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="new_exising_patient.resx">
       <DependentUpon>new_exising_patient.cs</DependentUpon>
@@ -229,6 +262,18 @@
     <EmbeddedResource Include="Results.resx">
       <DependentUpon>Results.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="s11.resx">
+      <DependentUpon>s11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="S12.resx">
+      <DependentUpon>S12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="s13.resx">
+      <DependentUpon>s13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="s14.resx">
+      <DependentUpon>s14.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="S3.resx">
       <DependentUpon>S3.cs</DependentUpon>
     </EmbeddedResource>
@@ -237,6 +282,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TestPayment.resx">
       <DependentUpon>TestPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestsQuestions.resx">
+      <DependentUpon>TestsQuestions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View_Registration_Data.resx">
       <DependentUpon>View_Registration_Data.cs</DependentUpon>

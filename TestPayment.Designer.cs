@@ -41,6 +41,8 @@
             this.TestsNames = new System.Windows.Forms.CheckedListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PatientID = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +58,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(61, 105);
+            this.dateTimePicker1.Location = new System.Drawing.Point(203, 205);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(172, 20);
@@ -66,7 +68,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(58, 80);
+            this.label2.Location = new System.Drawing.Point(286, 176);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 13);
             this.label2.TabIndex = 2;
@@ -116,6 +118,7 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "Pay";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button3
             // 
@@ -130,12 +133,12 @@
             // 
             // TestsNames
             // 
+            this.TestsNames.BackColor = System.Drawing.Color.SteelBlue;
             this.TestsNames.FormattingEnabled = true;
             this.TestsNames.Items.AddRange(new object[] {
             "CBC",
-            "Glucose",
-            "Stool Test"});
-            this.TestsNames.Location = new System.Drawing.Point(61, 176);
+            "Endocrinology"});
+            this.TestsNames.Location = new System.Drawing.Point(61, 203);
             this.TestsNames.Name = "TestsNames";
             this.TestsNames.Size = new System.Drawing.Size(104, 49);
             this.TestsNames.TabIndex = 11;
@@ -143,7 +146,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(58, 160);
+            this.label4.Location = new System.Drawing.Point(58, 187);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 13);
             this.label4.TabIndex = 12;
@@ -159,12 +162,32 @@
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
+            // PatientID
+            // 
+            this.PatientID.Location = new System.Drawing.Point(61, 106);
+            this.PatientID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PatientID.Name = "PatientID";
+            this.PatientID.Size = new System.Drawing.Size(86, 20);
+            this.PatientID.TabIndex = 14;
+            this.PatientID.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(58, 80);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(51, 13);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "PatientID";
+            // 
             // TestPayment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(686, 366);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.PatientID);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.TestsNames);
@@ -201,5 +224,7 @@
         private System.Windows.Forms.CheckedListBox TestsNames;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox PatientID;
+        private System.Windows.Forms.Label label6;
     }
 }

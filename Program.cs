@@ -16,7 +16,7 @@ namespace Test_Lab_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SignIn());
+            Application.Run(new DoctorView());
         }
     }
 }

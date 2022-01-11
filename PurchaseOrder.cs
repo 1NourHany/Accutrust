@@ -24,5 +24,11 @@ namespace Test_Lab_System
         {
 
         }
+
+        private void PurchaseOrder_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

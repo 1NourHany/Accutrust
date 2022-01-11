@@ -30,17 +30,7 @@
         {
             System.Windows.Forms.Panel panel3;
             this.panel7 = new System.Windows.Forms.Panel();
-            this.Lbl_GenderError = new System.Windows.Forms.Label();
-            this.Lbl_PositionError = new System.Windows.Forms.Label();
-            this.Lbl_NationalIDError = new System.Windows.Forms.Label();
-            this.Lbl_SupervisorError = new System.Windows.Forms.Label();
-            this.Lbl_LNameError = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.Lbl_PhoneError = new System.Windows.Forms.Label();
-            this.Lbl_PasswordError = new System.Windows.Forms.Label();
-            this.Lbl_MaritalStatusError = new System.Windows.Forms.Label();
-            this.Lbl_DBError = new System.Windows.Forms.Label();
-            this.LBL_Age = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.EmployeeDepartment = new System.Windows.Forms.TextBox();
             this.Nationality = new System.Windows.Forms.TextBox();
@@ -52,30 +42,20 @@
             this.MaritalStatus = new System.Windows.Forms.TextBox();
             this.EmployeeSalary = new System.Windows.Forms.TextBox();
             this.EmployeeName = new System.Windows.Forms.TextBox();
-            this.gender = new System.Windows.Forms.ComboBox();
             this.EmployeeDB = new System.Windows.Forms.DateTimePicker();
             this.EmployeeSupervisor = new System.Windows.Forms.TextBox();
             this.EmployeePassword = new System.Windows.Forms.TextBox();
             this.EmployeePosition = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.Lbl_SalaryError = new System.Windows.Forms.Label();
-            this.Lbl_HomeError = new System.Windows.Forms.Label();
-            this.Lbl_DepartmentError = new System.Windows.Forms.Label();
-            this.Lbl_AgeError = new System.Windows.Forms.Label();
-            this.Lbl_NationalityError = new System.Windows.Forms.Label();
-            this.LblEmail_Error = new System.Windows.Forms.Label();
-            this.Lbl_IDError = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.gender = new System.Windows.Forms.ComboBox();
             panel3 = new System.Windows.Forms.Panel();
             panel3.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,124 +71,24 @@
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.Lbl_GenderError);
-            this.panel7.Controls.Add(this.Lbl_PositionError);
-            this.panel7.Controls.Add(this.Lbl_NationalIDError);
-            this.panel7.Controls.Add(this.Lbl_SupervisorError);
-            this.panel7.Controls.Add(this.Lbl_LNameError);
             this.panel7.Location = new System.Drawing.Point(448, 0);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(65, 266);
             this.panel7.TabIndex = 7;
             // 
-            // Lbl_GenderError
-            // 
-            this.Lbl_GenderError.AutoSize = true;
-            this.Lbl_GenderError.Location = new System.Drawing.Point(5, 59);
-            this.Lbl_GenderError.Name = "Lbl_GenderError";
-            this.Lbl_GenderError.Size = new System.Drawing.Size(10, 13);
-            this.Lbl_GenderError.TabIndex = 19;
-            this.Lbl_GenderError.Text = " ";
-            // 
-            // Lbl_PositionError
-            // 
-            this.Lbl_PositionError.AutoSize = true;
-            this.Lbl_PositionError.Location = new System.Drawing.Point(5, 228);
-            this.Lbl_PositionError.Name = "Lbl_PositionError";
-            this.Lbl_PositionError.Size = new System.Drawing.Size(10, 13);
-            this.Lbl_PositionError.TabIndex = 18;
-            this.Lbl_PositionError.Text = " ";
-            // 
-            // Lbl_NationalIDError
-            // 
-            this.Lbl_NationalIDError.AutoSize = true;
-            this.Lbl_NationalIDError.Location = new System.Drawing.Point(4, 122);
-            this.Lbl_NationalIDError.Name = "Lbl_NationalIDError";
-            this.Lbl_NationalIDError.Size = new System.Drawing.Size(10, 13);
-            this.Lbl_NationalIDError.TabIndex = 14;
-            this.Lbl_NationalIDError.Text = " ";
-            // 
-            // Lbl_SupervisorError
-            // 
-            this.Lbl_SupervisorError.AutoSize = true;
-            this.Lbl_SupervisorError.Location = new System.Drawing.Point(2, 169);
-            this.Lbl_SupervisorError.Name = "Lbl_SupervisorError";
-            this.Lbl_SupervisorError.Size = new System.Drawing.Size(10, 13);
-            this.Lbl_SupervisorError.TabIndex = 22;
-            this.Lbl_SupervisorError.Text = " ";
-            // 
-            // Lbl_LNameError
-            // 
-            this.Lbl_LNameError.AutoSize = true;
-            this.Lbl_LNameError.Location = new System.Drawing.Point(5, 8);
-            this.Lbl_LNameError.Name = "Lbl_LNameError";
-            this.Lbl_LNameError.Size = new System.Drawing.Size(10, 13);
-            this.Lbl_LNameError.TabIndex = 13;
-            this.Lbl_LNameError.Text = " ";
-            // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.Lbl_PhoneError);
-            this.panel6.Controls.Add(this.Lbl_PasswordError);
-            this.panel6.Controls.Add(this.Lbl_MaritalStatusError);
-            this.panel6.Controls.Add(this.Lbl_DBError);
-            this.panel6.Controls.Add(this.LBL_Age);
             this.panel6.Location = new System.Drawing.Point(700, 0);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(68, 266);
             this.panel6.TabIndex = 7;
-            // 
-            // Lbl_PhoneError
-            // 
-            this.Lbl_PhoneError.AutoSize = true;
-            this.Lbl_PhoneError.Location = new System.Drawing.Point(4, 60);
-            this.Lbl_PhoneError.Name = "Lbl_PhoneError";
-            this.Lbl_PhoneError.Size = new System.Drawing.Size(10, 13);
-            this.Lbl_PhoneError.TabIndex = 25;
-            this.Lbl_PhoneError.Text = " ";
-            // 
-            // Lbl_PasswordError
-            // 
-            this.Lbl_PasswordError.AutoSize = true;
-            this.Lbl_PasswordError.Location = new System.Drawing.Point(3, 228);
-            this.Lbl_PasswordError.Name = "Lbl_PasswordError";
-            this.Lbl_PasswordError.Size = new System.Drawing.Size(10, 13);
-            this.Lbl_PasswordError.TabIndex = 24;
-            this.Lbl_PasswordError.Text = " ";
-            // 
-            // Lbl_MaritalStatusError
-            // 
-            this.Lbl_MaritalStatusError.AutoSize = true;
-            this.Lbl_MaritalStatusError.Location = new System.Drawing.Point(4, 116);
-            this.Lbl_MaritalStatusError.Name = "Lbl_MaritalStatusError";
-            this.Lbl_MaritalStatusError.Size = new System.Drawing.Size(10, 13);
-            this.Lbl_MaritalStatusError.TabIndex = 23;
-            this.Lbl_MaritalStatusError.Text = " ";
-            // 
-            // Lbl_DBError
-            // 
-            this.Lbl_DBError.AutoSize = true;
-            this.Lbl_DBError.Location = new System.Drawing.Point(4, 170);
-            this.Lbl_DBError.Name = "Lbl_DBError";
-            this.Lbl_DBError.Size = new System.Drawing.Size(10, 13);
-            this.Lbl_DBError.TabIndex = 15;
-            this.Lbl_DBError.Text = " ";
-            // 
-            // LBL_Age
-            // 
-            this.LBL_Age.AutoSize = true;
-            this.LBL_Age.Location = new System.Drawing.Point(3, 10);
-            this.LBL_Age.Name = "LBL_Age";
-            this.LBL_Age.Size = new System.Drawing.Size(10, 13);
-            this.LBL_Age.TabIndex = 20;
-            this.LBL_Age.Text = " ";
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.60159F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.39841F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 260F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 262F));
             this.tableLayoutPanel1.Controls.Add(this.EmployeeDepartment, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.Nationality, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.EmployeeID, 0, 0);
@@ -266,6 +146,7 @@
             this.EmployeeID.Size = new System.Drawing.Size(173, 20);
             this.EmployeeID.TabIndex = 0;
             this.EmployeeID.Text = "Employee ID";
+            this.EmployeeID.TextChanged += new System.EventHandler(this.EmployeeID_TextChanged);
             // 
             // EmployeeEmail
             // 
@@ -281,7 +162,7 @@
             // 
             this.NationalID.BackColor = System.Drawing.Color.White;
             this.NationalID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NationalID.Location = new System.Drawing.Point(250, 115);
+            this.NationalID.Location = new System.Drawing.Point(249, 115);
             this.NationalID.Name = "NationalID";
             this.NationalID.Size = new System.Drawing.Size(173, 20);
             this.NationalID.TabIndex = 5;
@@ -291,7 +172,7 @@
             // 
             this.EmployeeAge.BackColor = System.Drawing.Color.White;
             this.EmployeeAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmployeeAge.Location = new System.Drawing.Point(500, 3);
+            this.EmployeeAge.Location = new System.Drawing.Point(498, 3);
             this.EmployeeAge.Name = "EmployeeAge";
             this.EmployeeAge.Size = new System.Drawing.Size(173, 20);
             this.EmployeeAge.TabIndex = 6;
@@ -301,7 +182,8 @@
             // 
             this.EmployeePhone.BackColor = System.Drawing.Color.White;
             this.EmployeePhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmployeePhone.Location = new System.Drawing.Point(500, 56);
+            this.EmployeePhone.Location = new System.Drawing.Point(498, 56);
+            this.EmployeePhone.MaxLength = 11;
             this.EmployeePhone.Name = "EmployeePhone";
             this.EmployeePhone.Size = new System.Drawing.Size(173, 20);
             this.EmployeePhone.TabIndex = 7;
@@ -311,7 +193,7 @@
             // 
             this.MaritalStatus.BackColor = System.Drawing.Color.White;
             this.MaritalStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaritalStatus.Location = new System.Drawing.Point(500, 115);
+            this.MaritalStatus.Location = new System.Drawing.Point(498, 115);
             this.MaritalStatus.Name = "MaritalStatus";
             this.MaritalStatus.Size = new System.Drawing.Size(173, 20);
             this.MaritalStatus.TabIndex = 8;
@@ -332,27 +214,15 @@
             this.EmployeeName.BackColor = System.Drawing.Color.White;
             this.EmployeeName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmployeeName.ForeColor = System.Drawing.Color.Black;
-            this.EmployeeName.Location = new System.Drawing.Point(250, 3);
+            this.EmployeeName.Location = new System.Drawing.Point(249, 3);
             this.EmployeeName.Name = "EmployeeName";
             this.EmployeeName.Size = new System.Drawing.Size(173, 20);
             this.EmployeeName.TabIndex = 1;
             this.EmployeeName.Text = "Employee Name";
             // 
-            // gender
-            // 
-            this.gender.FormattingEnabled = true;
-            this.gender.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.gender.Location = new System.Drawing.Point(250, 56);
-            this.gender.Name = "gender";
-            this.gender.Size = new System.Drawing.Size(173, 21);
-            this.gender.TabIndex = 20;
-            this.gender.Text = "Gender";
-            // 
             // EmployeeDB
             // 
-            this.EmployeeDB.Location = new System.Drawing.Point(500, 166);
+            this.EmployeeDB.Location = new System.Drawing.Point(498, 166);
             this.EmployeeDB.Name = "EmployeeDB";
             this.EmployeeDB.Size = new System.Drawing.Size(173, 20);
             this.EmployeeDB.TabIndex = 21;
@@ -362,17 +232,19 @@
             // 
             this.EmployeeSupervisor.BackColor = System.Drawing.Color.White;
             this.EmployeeSupervisor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmployeeSupervisor.Location = new System.Drawing.Point(250, 166);
+            this.EmployeeSupervisor.Location = new System.Drawing.Point(249, 166);
             this.EmployeeSupervisor.Name = "EmployeeSupervisor";
             this.EmployeeSupervisor.Size = new System.Drawing.Size(151, 20);
             this.EmployeeSupervisor.TabIndex = 24;
             this.EmployeeSupervisor.Text = "Employee Supervisor";
+            this.EmployeeSupervisor.TextChanged += new System.EventHandler(this.EmployeeSupervisor_TextChanged);
+            this.EmployeeSupervisor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.supervisor_keypress);
             // 
             // EmployeePassword
             // 
             this.EmployeePassword.BackColor = System.Drawing.Color.White;
             this.EmployeePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmployeePassword.Location = new System.Drawing.Point(500, 225);
+            this.EmployeePassword.Location = new System.Drawing.Point(498, 225);
             this.EmployeePassword.Name = "EmployeePassword";
             this.EmployeePassword.Size = new System.Drawing.Size(173, 20);
             this.EmployeePassword.TabIndex = 23;
@@ -382,7 +254,7 @@
             // 
             this.EmployeePosition.BackColor = System.Drawing.Color.White;
             this.EmployeePosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmployeePosition.Location = new System.Drawing.Point(250, 225);
+            this.EmployeePosition.Location = new System.Drawing.Point(249, 225);
             this.EmployeePosition.Name = "EmployeePosition";
             this.EmployeePosition.Size = new System.Drawing.Size(173, 20);
             this.EmployeePosition.TabIndex = 25;
@@ -390,80 +262,10 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.Lbl_SalaryError);
-            this.panel4.Controls.Add(this.Lbl_HomeError);
-            this.panel4.Controls.Add(this.Lbl_DepartmentError);
-            this.panel4.Controls.Add(this.Lbl_AgeError);
-            this.panel4.Controls.Add(this.Lbl_NationalityError);
-            this.panel4.Controls.Add(this.LblEmail_Error);
-            this.panel4.Controls.Add(this.Lbl_IDError);
             this.panel4.Location = new System.Drawing.Point(205, 40);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(70, 266);
             this.panel4.TabIndex = 6;
-            // 
-            // Lbl_SalaryError
-            // 
-            this.Lbl_SalaryError.AutoSize = true;
-            this.Lbl_SalaryError.Location = new System.Drawing.Point(4, 59);
-            this.Lbl_SalaryError.Name = "Lbl_SalaryError";
-            this.Lbl_SalaryError.Size = new System.Drawing.Size(10, 13);
-            this.Lbl_SalaryError.TabIndex = 12;
-            this.Lbl_SalaryError.Text = " ";
-            // 
-            // Lbl_HomeError
-            // 
-            this.Lbl_HomeError.AutoSize = true;
-            this.Lbl_HomeError.Location = new System.Drawing.Point(4, 204);
-            this.Lbl_HomeError.Name = "Lbl_HomeError";
-            this.Lbl_HomeError.Size = new System.Drawing.Size(10, 13);
-            this.Lbl_HomeError.TabIndex = 11;
-            this.Lbl_HomeError.Text = " ";
-            // 
-            // Lbl_DepartmentError
-            // 
-            this.Lbl_DepartmentError.AutoSize = true;
-            this.Lbl_DepartmentError.Location = new System.Drawing.Point(6, 231);
-            this.Lbl_DepartmentError.Name = "Lbl_DepartmentError";
-            this.Lbl_DepartmentError.Size = new System.Drawing.Size(10, 13);
-            this.Lbl_DepartmentError.TabIndex = 10;
-            this.Lbl_DepartmentError.Text = " ";
-            // 
-            // Lbl_AgeError
-            // 
-            this.Lbl_AgeError.AutoSize = true;
-            this.Lbl_AgeError.Location = new System.Drawing.Point(7, 83);
-            this.Lbl_AgeError.Name = "Lbl_AgeError";
-            this.Lbl_AgeError.Size = new System.Drawing.Size(10, 13);
-            this.Lbl_AgeError.TabIndex = 9;
-            this.Lbl_AgeError.Text = " ";
-            // 
-            // Lbl_NationalityError
-            // 
-            this.Lbl_NationalityError.AutoSize = true;
-            this.Lbl_NationalityError.Location = new System.Drawing.Point(5, 168);
-            this.Lbl_NationalityError.Name = "Lbl_NationalityError";
-            this.Lbl_NationalityError.Size = new System.Drawing.Size(10, 13);
-            this.Lbl_NationalityError.TabIndex = 8;
-            this.Lbl_NationalityError.Text = " ";
-            // 
-            // LblEmail_Error
-            // 
-            this.LblEmail_Error.AutoSize = true;
-            this.LblEmail_Error.Location = new System.Drawing.Point(5, 119);
-            this.LblEmail_Error.Name = "LblEmail_Error";
-            this.LblEmail_Error.Size = new System.Drawing.Size(10, 13);
-            this.LblEmail_Error.TabIndex = 7;
-            this.LblEmail_Error.Text = " ";
-            // 
-            // Lbl_IDError
-            // 
-            this.Lbl_IDError.AutoSize = true;
-            this.Lbl_IDError.Location = new System.Drawing.Point(5, 6);
-            this.Lbl_IDError.Name = "Lbl_IDError";
-            this.Lbl_IDError.Size = new System.Drawing.Size(10, 13);
-            this.Lbl_IDError.TabIndex = 6;
-            this.Lbl_IDError.Text = " ";
             // 
             // button1
             // 
@@ -523,6 +325,18 @@
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // gender
+            // 
+            this.gender.Items.AddRange(new object[] {
+            "Female",
+            "Male"});
+            this.gender.Location = new System.Drawing.Point(249, 56);
+            this.gender.Name = "gender";
+            this.gender.Size = new System.Drawing.Size(121, 21);
+            this.gender.TabIndex = 20;
+            this.gender.Text = "Gender";
+            this.gender.SelectedIndexChanged += new System.EventHandler(this.gender_SelectedIndexChanged);
+            // 
             // AddEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -534,14 +348,8 @@
             this.Text = "Add Employee";
             this.Load += new System.EventHandler(this.AddEmployee_Load);
             panel3.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -551,13 +359,6 @@
 
         #endregion
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label Lbl_SalaryError;
-        private System.Windows.Forms.Label Lbl_HomeError;
-        private System.Windows.Forms.Label Lbl_DepartmentError;
-        private System.Windows.Forms.Label Lbl_AgeError;
-        private System.Windows.Forms.Label Lbl_NationalityError;
-        private System.Windows.Forms.Label LblEmail_Error;
-        private System.Windows.Forms.Label Lbl_IDError;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox EmployeeDepartment;
         private System.Windows.Forms.TextBox EmployeeID;
@@ -568,28 +369,18 @@
         private System.Windows.Forms.TextBox MaritalStatus;
         private System.Windows.Forms.TextBox EmployeeSalary;
         private System.Windows.Forms.TextBox EmployeeName;
-        private System.Windows.Forms.ComboBox gender;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox EmployeePhone;
         private System.Windows.Forms.DateTimePicker EmployeeDB;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label Lbl_GenderError;
-        private System.Windows.Forms.Label Lbl_PositionError;
-        private System.Windows.Forms.Label Lbl_NationalIDError;
-        private System.Windows.Forms.Label Lbl_SupervisorError;
-        private System.Windows.Forms.Label Lbl_LNameError;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label Lbl_PhoneError;
-        private System.Windows.Forms.Label Lbl_PasswordError;
-        private System.Windows.Forms.Label Lbl_MaritalStatusError;
-        private System.Windows.Forms.Label Lbl_DBError;
-        private System.Windows.Forms.Label LBL_Age;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox Nationality;
         private System.Windows.Forms.TextBox EmployeePassword;
         private System.Windows.Forms.TextBox EmployeeSupervisor;
         private System.Windows.Forms.TextBox EmployeePosition;
+        private System.Windows.Forms.ComboBox gender;
     }
 }
