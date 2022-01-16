@@ -17,6 +17,7 @@ namespace Test_Lab_System
 {
     internal class Appointments : REGISTRATION
     {
+        [Required]
         public string AppointmentID { get; set; }
         [Required]
         public string AppointmentDate { get; set; }

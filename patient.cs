@@ -113,83 +113,211 @@ namespace Test_Lab_System
             Registration.EmergencyContactMobile = EmergencyPhone.Text;
             Registration.EmergencyContactRelationship = EmergencyRelationship.Text;
             Registration.PatientAddress = Address.Text;
-            MySqlConnection conn = new MySqlConnection("server=localhost;database=testlabsystem;uid=root;pwd=123456789");
-            MySqlCommand cmd = null;
-            //string cmdString = "";
-            conn.Open();
-            //using (MySqlConnection conn = new MySqlConnection("server=localhost;database=testlabsystem;uid=root;pwd=123456789"))
-            //{
-            //  conn.Open();
-            // try
-            //{
+            ValidationContext validationContext = new ValidationContext(Registration);
+            IList<ValidationResult> errors = new List<ValidationResult>();
+            if (!Validator.TryValidateObject(Registration, validationContext, errors, true))
+            {
+                foreach (var item in errors)
+                {
+                    switch (item.MemberNames.First())
+                    {
 
-            string cmdString = "insert into REGISTRATION(PatientID ,PatientFirstName , PatientLastName, PatientAge, PatientGender ,PatientMobilePhone," +
-    "PatientNationalID, PatientAddress , PatientMaritalStatus, PatientBloodType, PatientNationality , PatientEmail, PatientDOB , PatientJob , " +
-    "PatientMotherName , InsuranceCompany , InsuranceAddress, InsurancePhone, InsuranceSubscriberName, PatientHomePhone,EmergencyContactName," +
-    " EmergencyContactMobile, EmergencyContactRelationship) values(@param1, @param2 , @param3  , @param4," +
-    "@param44, @param5,@param6 , @param7  , @param8,@param9, @param10 , @param11  , @param12,@param13, @param14 ," +
-    " @param15  , @param16, @param17 , @param18  , @param19,@param20, @param21 , @param22 );";
-            //cmd = new MySqlCommand(cmdString, conn);
-            //Add paramter values
-            // cmd = new MySqlCommand(cmdString, conn);
-            cmd = new MySqlCommand(cmdString, conn);
+                        case "PatientID":
+                            Lbl_PatientIDError.Text = item.ErrorMessage;
+                            Lbl_PatientIDError.ForeColor = Color.Red;
+                            break;
+                        case "PatientFirstName":
+                            Lbl_FNameError.Text = item.ErrorMessage;
+                            Lbl_FNameError.ForeColor = Color.Red;
+                            break;
+                        case "PatientLastName":
+                            Lbl_LNameError.Text = item.ErrorMessage;
+                            Lbl_LNameError.ForeColor = Color.Red;
+                            break;
+                        case "PatientAge":
+                            Lbl_AgeError.Text = item.ErrorMessage;
+                            Lbl_AgeError.ForeColor = Color.Red;
+                            break;
+                        case "PatientGender":
+                            Lbl_GenderError.Text = item.ErrorMessage;
+                            Lbl_GenderError.ForeColor = Color.Red;
+                            break;
+                        case "PatientMobilePhone":
+                            Lbl_MobileNumberError.Text = item.ErrorMessage;
+                            Lbl_MobileNumberError.ForeColor = Color.Red;
+                            break;
+                        case "PatientNationalID":
+                            Lbl_NationalIDError.Text = item.ErrorMessage;
+                            Lbl_NationalIDError.ForeColor = Color.Red;
+                            break;
+                        case "PatientMaritalStatus":
+                            Lbl_MaritalStatusError.Text = item.ErrorMessage;
+                            Lbl_MaritalStatusError.ForeColor = Color.Red;
+                            break;
+                        case "PatientBloodType":
+                            Lbl_BloodTypeError.Text = item.ErrorMessage;
+                            Lbl_BloodTypeError.ForeColor = Color.Red;
+                            break;
+                        case "PatientNationality":
+                            LblNationality_Error.Text = item.ErrorMessage;
+                            LblNationality_Error.ForeColor = Color.Red;
+                            break;
+                        case "PatientEmail":
+                            Lbl_EmailError.Text = item.ErrorMessage;
+                            Lbl_EmailError.ForeColor = Color.Red;
+                            break;
+                        case "PatientJob":
+                            Lbl_JobError.Text = item.ErrorMessage;
+                            Lbl_JobError.ForeColor = Color.Red;
+                            break;
+                        case "PatientMotherName":
+                            Lbl_MotherNameError.Text = item.ErrorMessage;
+                            Lbl_MotherNameError.ForeColor = Color.Red;
+                            break;
+                        case "InsuranceCompany":
+                            Lbl_InsuranceCompanyError.Text = item.ErrorMessage;
+                            Lbl_InsuranceCompanyError.ForeColor = Color.Red;
+                            break;
+                        case "InsuranceAddress":
+                            Lbl_InsuranceAddressError.Text = item.ErrorMessage;
+                            Lbl_InsuranceAddressError.ForeColor = Color.Red;
+                            break;
+                        case "InsurancePhone":
+                            Lbl_InsurancePhoneError.Text = item.ErrorMessage;
+                            Lbl_InsurancePhoneError.ForeColor = Color.Red;
+                            break;
+                        case "InsuranceSubscriberName":
+                            Lbl_SubscriberNameError.Text = item.ErrorMessage;
+                            Lbl_SubscriberNameError.ForeColor = Color.Red;
+                            break;
+                        case "PatientHomePhone":
+                            Lbl_HomeError.Text = item.ErrorMessage;
+                            Lbl_HomeError.ForeColor = Color.Red;
+                            break;
+                        case "EmergencyContactName":
+                            Lbl_EmergencyNameError.Text = item.ErrorMessage;
+                            Lbl_EmergencyNameError.ForeColor = Color.Red;
+                            break;
+                        case "EmergencyContactMobile":
+                            Lbl_EmergencyPhoneError.Text = item.ErrorMessage;
+                            Lbl_EmergencyPhoneError.ForeColor = Color.Red;
+                            break;
+                        case "EmergencyContactRelationship":
+                            Lbl_EmergencyRelationshipError.Text = item.ErrorMessage;
+                            Lbl_EmergencyRelationshipError.ForeColor = Color.Red;
+                            break;
+                        case "PatientAddress":
+                            Lbl_AddressError.Text = item.ErrorMessage;
+                            Lbl_AddressError.ForeColor = Color.Red;
+                            break;
+                        default:
+                            MessageBox.Show(item.ErrorMessage);
+                            break;
+                    }
+                }
+            }
+            else
+            {
+                //database insert patient
+                //string conStr = ConfigurationManager.ConnectionStrings["db"].ToString();
+                //#region insert into Patient table
+                //using (MySqlConnection sqlcon = new MySqlConnection(conStr))
+                //{
+                //sqlcon.Open();
 
-            cmd.Parameters.Add("@param1", MySqlDbType.VarChar);
-            cmd.Parameters["@param1"].Value = Registration.PatientID.ToString();
-            cmd.Parameters.Add("@param2", MySqlDbType.VarChar);
-            cmd.Parameters["@param2"].Value = Registration.PatientFirstName.ToString();
-            cmd.Parameters.Add("@param3", MySqlDbType.VarChar);
-            cmd.Parameters["@param3"].Value = Registration.PatientLastName.ToString();
-            cmd.Parameters.Add("@param4", MySqlDbType.VarChar);
-            cmd.Parameters["@param4"].Value = Registration.PatientAge.ToString();
-            cmd.Parameters.Add("@param44", MySqlDbType.VarChar);
-            cmd.Parameters["@param44"].Value = Registration.PatientGender.ToString();
-            cmd.Parameters.Add("@param5", MySqlDbType.VarChar);
-            cmd.Parameters["@param5"].Value = Registration.PatientMobilePhone.ToString();
-            cmd.Parameters.Add("@param6", MySqlDbType.VarChar);
-            cmd.Parameters["@param6"].Value = Registration.PatientNationalID.ToString();
-            cmd.Parameters.Add("@param7", MySqlDbType.VarChar);
-            cmd.Parameters["@param7"].Value = Registration.PatientAddress.ToString();
-            cmd.Parameters.Add("@param8", MySqlDbType.VarChar);
-            cmd.Parameters["@param8"].Value = Registration.PatientMaritalStatus.ToString();
-            cmd.Parameters.Add("@param9", MySqlDbType.VarChar);
-            cmd.Parameters["@param9"].Value = Registration.PatientBloodType.ToString();
-            cmd.Parameters.Add("@param10", MySqlDbType.VarChar);
-            cmd.Parameters["@param10"].Value = Registration.PatientNationality.ToString();
-            cmd.Parameters.Add("@param11", MySqlDbType.VarChar);
-            cmd.Parameters["@param11"].Value = Registration.PatientEmail.ToString();
-            cmd.Parameters.Add("@param12", MySqlDbType.VarChar);
-            cmd.Parameters["@param12"].Value = Registration.PatientDOB.ToString();
-            cmd.Parameters.Add("@param13", MySqlDbType.VarChar);
-            cmd.Parameters["@param13"].Value = Registration.PatientJob.ToString();
-            cmd.Parameters.Add("@param14", MySqlDbType.VarChar);
-            cmd.Parameters["@param14"].Value = Registration.PatientMotherName.ToString();
-            cmd.Parameters.Add("@param15", MySqlDbType.VarChar);
-            cmd.Parameters["@param15"].Value = Registration.InsuranceCompany.ToString();
-            cmd.Parameters.Add("@param16", MySqlDbType.VarChar);
-            cmd.Parameters["@param16"].Value = Registration.InsuranceAddress.ToString();
-            cmd.Parameters.Add("@param17", MySqlDbType.VarChar);
-            cmd.Parameters["@param17"].Value = Registration.InsurancePhone.ToString();
-            cmd.Parameters.Add("@param18", MySqlDbType.VarChar);
-            cmd.Parameters["@param18"].Value = Registration.InsuranceSubscriberName.ToString();
-            cmd.Parameters.Add("@param19", MySqlDbType.VarChar);
-            cmd.Parameters["@param19"].Value = Registration.PatientHomePhone.ToString();
-            cmd.Parameters.Add("@param20", MySqlDbType.VarChar);
-            cmd.Parameters["@param20"].Value = Registration.EmergencyContactName.ToString();
-            cmd.Parameters.Add("@param21", MySqlDbType.VarChar);
-            cmd.Parameters["@param21"].Value = Registration.EmergencyContactMobile.ToString();
-            cmd.Parameters.Add("@param22", MySqlDbType.VarChar);
-            cmd.Parameters["@param22"].Value = Registration.EmergencyContactRelationship.ToString(); ;
-            MySqlDataAdapter adp = new MySqlDataAdapter();
-            adp.InsertCommand = cmd;
-            adp.InsertCommand.ExecuteNonQuery();
-            MessageBox.Show("Data Stored Successfully");
-          
-            AddAppointment obj = new AddAppointment(textBox1.Text);
-            obj.Show();
+                try
+                {
+                    MySqlConnection conn = new MySqlConnection("server=localhost;database=dentistryclinic;uid=root;pwd=123456789");
+                    MySqlCommand cmd = null;
+
+                    conn.Open();
+
+                    string cmdString = "insert into REGISTRATION(PatientID ,PatientFirstName , PatientLastName, PatientAge, PatientGender ,PatientMobilePhone," +
+                                 "PatientNationalID, PatientAddress , PatientMaritalStatus, PatientBloodType, PatientNationality , PatientEmail, PatientDOB , PatientJob , " +
+                                 "PatientMotherName , InsuranceCompany , InsuranceAddress, InsurancePhone, InsuranceSubscriberName, PatientHomePhone,EmergencyContactName," +
+                                 " EmergencyContactMobile, EmergencyContactRelationship) values(@param1, @param2 , @param3  , @param4," +
+                                 "@param44, @param5,@param6 , @param7  , @param8,@param9, @param10 , @param11  , @param12,@param13, @param14 ," +
+                                 " @param15  , @param16, @param17 , @param18  , @param19,@param20, @param21 , @param22 );";
+                    cmd = new MySqlCommand(cmdString, conn);
+                    //Add paramter values
+                    // cmd = new MySqlCommand(cmdString, conn);
+                    //      cmd = new MySqlCommand(cmdString, conn);
+
+                    cmd.Parameters.Add("@param1", MySqlDbType.VarChar);
+                    cmd.Parameters["@param1"].Value = Registration.PatientID.ToString();
+                    cmd.Parameters.Add("@param2", MySqlDbType.VarChar);
+                    cmd.Parameters["@param2"].Value = Registration.PatientFirstName.ToString();
+                    cmd.Parameters.Add("@param3", MySqlDbType.VarChar);
+                    cmd.Parameters["@param3"].Value = Registration.PatientLastName.ToString();
+                    cmd.Parameters.Add("@param4", MySqlDbType.VarChar);
+                    cmd.Parameters["@param4"].Value = Registration.PatientAge.ToString();
+                    cmd.Parameters.Add("@param44", MySqlDbType.VarChar);
+                    cmd.Parameters["@param44"].Value = Registration.PatientGender.ToString();
+                    cmd.Parameters.Add("@param5", MySqlDbType.VarChar);
+                    cmd.Parameters["@param5"].Value = Registration.PatientMobilePhone.ToString();
+                    cmd.Parameters.Add("@param6", MySqlDbType.VarChar);
+                    cmd.Parameters["@param6"].Value = Registration.PatientNationalID.ToString();
+                    cmd.Parameters.Add("@param7", MySqlDbType.VarChar);
+                    cmd.Parameters["@param7"].Value = Registration.PatientAddress.ToString();
+                    cmd.Parameters.Add("@param8", MySqlDbType.VarChar);
+                    cmd.Parameters["@param8"].Value = Registration.PatientMaritalStatus.ToString();
+                    cmd.Parameters.Add("@param9", MySqlDbType.VarChar);
+                    cmd.Parameters["@param9"].Value = Registration.PatientBloodType.ToString();
+                    cmd.Parameters.Add("@param10", MySqlDbType.VarChar);
+                    cmd.Parameters["@param10"].Value = Registration.PatientNationality.ToString();
+                    cmd.Parameters.Add("@param11", MySqlDbType.VarChar);
+                    cmd.Parameters["@param11"].Value = Registration.PatientEmail.ToString();
+                    cmd.Parameters.Add("@param12", MySqlDbType.VarChar);
+                    cmd.Parameters["@param12"].Value = Registration.PatientDOB.ToString();
+                    cmd.Parameters.Add("@param13", MySqlDbType.VarChar);
+                    cmd.Parameters["@param13"].Value = Registration.PatientJob.ToString();
+                    cmd.Parameters.Add("@param14", MySqlDbType.VarChar);
+                    cmd.Parameters["@param14"].Value = Registration.PatientMotherName.ToString();
+                    cmd.Parameters.Add("@param15", MySqlDbType.VarChar);
+                    cmd.Parameters["@param15"].Value = Registration.InsuranceCompany.ToString();
+                    cmd.Parameters.Add("@param16", MySqlDbType.VarChar);
+                    cmd.Parameters["@param16"].Value = Registration.InsuranceAddress.ToString();
+                    cmd.Parameters.Add("@param17", MySqlDbType.VarChar);
+                    cmd.Parameters["@param17"].Value = Registration.InsurancePhone.ToString();
+                    cmd.Parameters.Add("@param18", MySqlDbType.VarChar);
+                    cmd.Parameters["@param18"].Value = Registration.InsuranceSubscriberName.ToString();
+                    cmd.Parameters.Add("@param19", MySqlDbType.VarChar);
+                    cmd.Parameters["@param19"].Value = Registration.PatientHomePhone.ToString();
+                    cmd.Parameters.Add("@param20", MySqlDbType.VarChar);
+                    cmd.Parameters["@param20"].Value = Registration.EmergencyContactName.ToString();
+                    cmd.Parameters.Add("@param21", MySqlDbType.VarChar);
+                    cmd.Parameters["@param21"].Value = Registration.EmergencyContactMobile.ToString();
+                    cmd.Parameters.Add("@param22", MySqlDbType.VarChar);
+                    cmd.Parameters["@param22"].Value = Registration.EmergencyContactRelationship.ToString();
+                    MySqlDataAdapter adp = new MySqlDataAdapter();
+                    adp.InsertCommand = cmd;
+                    adp.InsertCommand.ExecuteNonQuery();
+                    MessageBox.Show("Data Stored Successfully");
+
+                }
 
 
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+
+
+                }
+
+            }
+            //#endregion
         }
+
+        //        MySqlDataAdapter adp = new MySqlDataAdapter();
+        //          adp.InsertCommand = cmd;
+        //        adp.InsertCommand.ExecuteNonQuery();
+        //      MessageBox.Show("Data Stored Successfully");
+
+        //  AddAppointment obj = new AddAppointment(textBox1.Text);
+        //    obj.Show();
+
+        //
+        //      }
 
 
 
@@ -202,9 +330,9 @@ namespace Test_Lab_System
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //this.Hide();
-            //AddAppointment f2 = new AddAppointment();
-            //f2.Show();
+            this.Hide();
+            AddAppointment f2 = new AddAppointment(textBox1.Text);
+            f2.Show();
         }
 
         private void Click_Menu(object sender, EventArgs e)
@@ -221,7 +349,12 @@ namespace Test_Lab_System
 
         private void Fname_keypress(object sender, KeyPressEventArgs e)
         {
-            FirstName.MaxLength = 10;
+            FirstName.MaxLength = 20;
+
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void mobile_keypress(object sender, KeyPressEventArgs e)
@@ -235,12 +368,20 @@ namespace Test_Lab_System
 
         private void Lname_keypress(object sender, KeyPressEventArgs e)
         {
-            LastName.MaxLength = 10;
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            LastName.MaxLength = 20;
         }
 
         private void Address_keypress(object sender, KeyPressEventArgs e)
         {
-            LastName.MaxLength = 40;
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            Address.MaxLength = 40;
         }
 
         private void Age_keypress(object sender, KeyPressEventArgs e)
@@ -273,6 +414,191 @@ namespace Test_Lab_System
         }
 
         private void DOB_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MotherNameKeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            MotherName.MaxLength = 20;
+        }
+
+        private void SunscriberNameKeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            SubscriberName.MaxLength = 20;
+        }
+
+        private void EmergencyName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            EmergencyName.MaxLength = 20;
+        }
+
+        private void PatientGender_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NationalIDKeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            NationalID.MaxLength = 14;
+        }
+
+        private void MaritalStatus_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            MaritalStatus.MaxLength = 10;
+
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void MaritalStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Nationality_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            Nationality.MaxLength = 20;
+        }
+
+        private void PatientID_keypress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            textBox1.MaxLength = 8;
+        }
+
+        private void Job_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            Job.MaxLength = 11;
+        }
+
+        private void EmergencyPhone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            EmergencyPhone.MaxLength = 11;
+
+        }
+
+        private void Home_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            Home.MaxLength = 10;
+        }
+
+        private void EmergencyRelationship_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            EmergencyRelationship.MaxLength = 15;
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void InsuranceCompany_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            InsuranceCompany.MaxLength = 15;
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void InsuranceAddress_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            textBox1.MaxLength = 8;
+            InsuranceAddress.MaxLength = 15;
+            //e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+        }
+
+        private void InsuranceNumber_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void InsuranceNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            InsuranceNumber.MaxLength = 11;
+        }
+
+        private void InsuranceNumber_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Email_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            Email.MaxLength = 30;
+        }
+
+        private void Address_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            //                    this.Hide();
+                    //this.Close();
+                    patient t = new patient();
+                    t.Show();this.Close();
+           // patient t = new patient();
+            //t.Show();
+        }
+
+        private void textBox1_KeyUp(object sender, KeyEventArgs e)
         {
 
         }

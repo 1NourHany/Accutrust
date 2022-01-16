@@ -16,7 +16,7 @@ namespace Test_Lab_System
 
     public partial class AddAppointment : System.Windows.Forms.Form
     {
-        MySqlConnection connection = new MySqlConnection("DataSource=localhost;database=testlabsystem;uid=root;pwd=123456789");
+        MySqlConnection connection = new MySqlConnection("DataSource=localhost;database=TestLabSystem;uid=root;pwd=123456789");
         MySqlCommand command;
         MySqlDataAdapter adapter;
         DataTable table;
@@ -85,16 +85,12 @@ namespace Test_Lab_System
             appointments.AppointmentDate = dateTimePicker1.Text;
             appointments.Appointmenttime = dateTimePicker2.Text;
             appointments.PatientID = textBox2.Text;
-            MySqlConnection conn = new MySqlConnection("server=localhost;database=testlabsystem;uid=root;pwd=123456789");
+            MySqlConnection conn = new MySqlConnection("server=localhost;database=TestLabSystem;uid=root;pwd=123456789");
             MySqlCommand cmd = null;
             
             //string cmdString = "";
             conn.Open();
-            //using (MySqlConnection conn = new MySqlConnection("server=localhost;database=testlabsystem;uid=root;pwd=123456789"))
-            //{
-            //  conn.Open();
-            // try
-            //{
+            
 
             string cmdString = "insert into APPOINTMENT(AppointmentID, AppointmentDate, Appointmenttime, PatientID)values(TO_BASE64(RANDOM_BYTES(5)), @param2 , @param3  , @param4);";
 
@@ -126,7 +122,7 @@ namespace Test_Lab_System
         public void searchData()
         {
             string query = "SELECT * FROM APPOINTMENT";
-            MySqlConnection connection = new MySqlConnection("DataSource=localhost;database=testlabsystem;uid=root;pwd=123456789");
+            MySqlConnection connection = new MySqlConnection("DataSource=localhost;database=TestLabSystem ;uid=root;pwd=123456789");
             command = new MySqlCommand(query, connection);
             adapter = new MySqlDataAdapter(command);
             table = new DataTable();

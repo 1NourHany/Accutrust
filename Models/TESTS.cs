@@ -19,6 +19,19 @@ namespace Test_Lab_System
     {          
         [Required]
         public string TestName { get; set; }
+        [Required]
+        public string TestID { get; set; }
+        [Required]
+        public string TotalPay { get; set; }
+        [Required]
+        public string TransactionNumber { get; set; }
+        [Required]
+        public string ReportDate { get; set; }
+
+        [Required]
+        public string AppointmentMonth{ get; set; }
+        
+
     }
 }
 

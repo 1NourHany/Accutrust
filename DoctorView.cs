@@ -21,6 +21,7 @@ namespace Test_Lab_System
         MySqlCommand command2;
         MySqlDataAdapter adapter2;
         DataTable table2;
+        //List<Observer> observers = new List<Observer>();
         public DoctorView()
         {
             InitializeComponent();
@@ -85,9 +86,9 @@ namespace Test_Lab_System
         {
 
         }
-        public void searchData(string valueToSearch,  string valueToSearch2, string valueToSearch3, string valueToSearch4)
+        public void searchData(string valueToSearch, string valueToSearch2, string valueToSearch3, string valueToSearch4)
         {
-            string query = "SELECT * FROM APPOINTMENT WHERE CONCAT (AppointmentDate,PatientID) like '%" + valueToSearch + valueToSearch2+ "%'";
+            string query = "SELECT * FROM APPOINTMENT WHERE CONCAT (AppointmentDate,PatientID) like '%" + valueToSearch + valueToSearch2 + "%'";
 
             command = new MySqlCommand(query, connection);
             adapter = new MySqlDataAdapter(command);
@@ -104,7 +105,7 @@ namespace Test_Lab_System
             {
                 if (dataGridView2.Rows.Count > 1)
                 {
-                    
+
 
                     MessageBox.Show("Appointment Date, Patient ID, PatientName and PatientAge are valid.");
 
@@ -132,7 +133,7 @@ namespace Test_Lab_System
         {
             string valueToSearch = AppDate.Text.ToString();
             string valueToSearch2 = PatientID.Text.ToString();
-            string valueToSearch3= PatientName.Text.ToString();
+            string valueToSearch3 = PatientName.Text.ToString();
             string valueToSearch4 = PatientAge.Text.ToString();
             searchData(valueToSearch, valueToSearch2, valueToSearch3, valueToSearch4);
 
@@ -145,8 +146,8 @@ namespace Test_Lab_System
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            
-             label5.Text = this.dataGridView1.CurrentRow.Cells[0].Value.ToString();
+
+            label5.Text = this.dataGridView1.CurrentRow.Cells[0].Value.ToString();
 
 
         }
@@ -171,77 +172,133 @@ namespace Test_Lab_System
             {
                 int firstRowIndex = dataGridView1.SelectedRows.Count - 1;
                 string cell = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                int firstRowIndex2 = dataGridView2.SelectedRows.Count - 1;
+                string cell2 = dataGridView2.CurrentRow.Cells[0].Value.ToString();
                 TESTS tests = new TESTS();
                 tests.TestName = "CBC";
                 tests.AppointmentID = cell;
+                tests.TotalPay = "200";
+                tests.ReportDate = ReportDate.Text;
+                tests.PatientID = cell2;
+                string[] separatingStrings = { "/" };
+                string[] words = AppDate.Text.Split(separatingStrings, System.StringSplitOptions.RemoveEmptyEntries);
+                tests.AppointmentMonth = words[1];
+
                 MySqlConnection conn = new MySqlConnection("server=localhost;database=testlabsystem;uid=root;pwd=123456789");
                 MySqlCommand cmd = null;
                 conn.Open();
-                string cmdString = "insert into TESTS(TestName,AppointmentID) values(@param2 , @param1);";
+                string cmdString = "insert into TESTS(TestID,TestName,AppointmentID,TransactionNumber,TotalPay, ReportDate, PatientID, AppointmentMonth) " +
+                    "values(TO_BASE64(RANDOM_BYTES(6)),@param2 , @param1, TO_BASE64(RANDOM_BYTES(6)),@param3 , @param4, @param5, @param6);";
                 cmd = new MySqlCommand(cmdString, conn);
-
                 cmd.Parameters.Add("@param1", MySqlDbType.VarChar);
                 cmd.Parameters["@param1"].Value = tests.AppointmentID.ToString();
                 cmd.Parameters.Add("@param2", MySqlDbType.VarChar);
                 cmd.Parameters["@param2"].Value = tests.TestName.ToString();
+                cmd.Parameters.Add("@param3", MySqlDbType.VarChar);
+                cmd.Parameters["@param3"].Value = tests.TotalPay.ToString();
+                cmd.Parameters.Add("@param4", MySqlDbType.VarChar);
+                cmd.Parameters["@param4"].Value = tests.ReportDate.ToString();
+                cmd.Parameters.Add("@param5", MySqlDbType.VarChar);
+                cmd.Parameters["@param5"].Value = tests.PatientID.ToString();
+                cmd.Parameters.Add("@param6", MySqlDbType.VarChar);
+                cmd.Parameters["@param6"].Value = tests.AppointmentMonth.ToString();
 
                 MySqlDataAdapter adp = new MySqlDataAdapter();
                 adp.InsertCommand = cmd;
                 adp.InsertCommand.ExecuteNonQuery();
                 MessageBox.Show("Data Stored Successfully");
+                return;
 
 
             }
-            if (!CBCTest.Checked && Endocrinology.Checked)
+            else if (!CBCTest.Checked && Endocrinology.Checked)
             {
                 int firstRowIndex = dataGridView1.SelectedRows.Count - 1;
                 string cell = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-                TESTS tests = new TESTS(); 
+                int firstRowIndex2 = dataGridView2.SelectedRows.Count - 1;
+                string cell2 = dataGridView2.CurrentRow.Cells[0].Value.ToString();
+                TESTS tests = new TESTS();
                 tests.TestName = "Endocrinology";
                 tests.AppointmentID = cell;
+                tests.TotalPay = "300";
+                tests.ReportDate = ReportDate.Text;
+                tests.PatientID = cell2;
+                string[] separatingStrings = { "/" };
+                string[] words = AppDate.Text.Split(separatingStrings, System.StringSplitOptions.RemoveEmptyEntries);
+                tests.AppointmentMonth = words[1];
+
                 MySqlConnection conn = new MySqlConnection("server=localhost;database=testlabsystem;uid=root;pwd=123456789");
                 MySqlCommand cmd = null;
                 conn.Open();
-                string cmdString = "insert into TESTS(TestName,AppointmentID) values(@param2 , @param1);";
+                string cmdString = "insert into TESTS(TestID,TestName,AppointmentID,TransactionNumber,TotalPay, ReportDate, PatientID, AppointmentMonth) " +
+                    "values(TO_BASE64(RANDOM_BYTES(6)),@param2 , @param1, TO_BASE64(RANDOM_BYTES(6)),@param3 , @param4, @param5, @param6);";
                 cmd = new MySqlCommand(cmdString, conn);
-
                 cmd.Parameters.Add("@param1", MySqlDbType.VarChar);
                 cmd.Parameters["@param1"].Value = tests.AppointmentID.ToString();
                 cmd.Parameters.Add("@param2", MySqlDbType.VarChar);
                 cmd.Parameters["@param2"].Value = tests.TestName.ToString();
+                cmd.Parameters.Add("@param3", MySqlDbType.VarChar);
+                cmd.Parameters["@param3"].Value = tests.TotalPay.ToString();
+                cmd.Parameters.Add("@param4", MySqlDbType.VarChar);
+                cmd.Parameters["@param4"].Value = tests.ReportDate.ToString();
+                cmd.Parameters.Add("@param5", MySqlDbType.VarChar);
+                cmd.Parameters["@param5"].Value = tests.PatientID.ToString();
+                cmd.Parameters.Add("@param6", MySqlDbType.VarChar);
+                cmd.Parameters["@param6"].Value = tests.AppointmentMonth.ToString();
 
                 MySqlDataAdapter adp = new MySqlDataAdapter();
                 adp.InsertCommand = cmd;
                 adp.InsertCommand.ExecuteNonQuery();
                 MessageBox.Show("Data Stored Successfully");
+                return;
+
+
 
             }
             else if (CBCTest.Checked && Endocrinology.Checked)
             {
-                //int firstRowIndex = dataGridView1.SelectedRows.Count - 1;
+                int firstRowIndex = dataGridView1.SelectedRows.Count - 1;
                 string cell = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                int firstRowIndex2 = dataGridView2.SelectedRows.Count - 1;
+                string cell2 = dataGridView2.CurrentRow.Cells[0].Value.ToString();
                 TESTS tests = new TESTS();
-                tests.TestName = "CBC and Endocrinology";
+                tests.TestName = "CBC and Endocirnology";
                 tests.AppointmentID = cell;
+                tests.TotalPay = "500";
+                tests.ReportDate = ReportDate.Text;
+                tests.PatientID = cell2;
+                string[] separatingStrings = { "/" };
+                string[] words = AppDate.Text.Split(separatingStrings, System.StringSplitOptions.RemoveEmptyEntries);
+                tests.AppointmentMonth = words[1];
+
                 MySqlConnection conn = new MySqlConnection("server=localhost;database=testlabsystem;uid=root;pwd=123456789");
                 MySqlCommand cmd = null;
                 conn.Open();
-                string cmdString = "insert into TESTS(TestName,AppointmentID) values(@param2 , @param1);";
+                string cmdString = "insert into TESTS(TestID,TestName,AppointmentID,TransactionNumber,TotalPay, ReportDate, PatientID, AppointmentMonth) " +
+                    "values(TO_BASE64(RANDOM_BYTES(6)),@param2 , @param1, TO_BASE64(RANDOM_BYTES(6)),@param3 , @param4, @param5, @param6);";
                 cmd = new MySqlCommand(cmdString, conn);
-
                 cmd.Parameters.Add("@param1", MySqlDbType.VarChar);
                 cmd.Parameters["@param1"].Value = tests.AppointmentID.ToString();
                 cmd.Parameters.Add("@param2", MySqlDbType.VarChar);
                 cmd.Parameters["@param2"].Value = tests.TestName.ToString();
+                cmd.Parameters.Add("@param3", MySqlDbType.VarChar);
+                cmd.Parameters["@param3"].Value = tests.TotalPay.ToString();
+                cmd.Parameters.Add("@param4", MySqlDbType.VarChar);
+                cmd.Parameters["@param4"].Value = tests.ReportDate.ToString();
+                cmd.Parameters.Add("@param5", MySqlDbType.VarChar);
+                cmd.Parameters["@param5"].Value = tests.PatientID.ToString();
+                cmd.Parameters.Add("@param6", MySqlDbType.VarChar);
+                cmd.Parameters["@param6"].Value = tests.AppointmentMonth.ToString();
 
                 MySqlDataAdapter adp = new MySqlDataAdapter();
                 adp.InsertCommand = cmd;
                 adp.InsertCommand.ExecuteNonQuery();
                 MessageBox.Show("Data Stored Successfully");
+                return;
 
             }
-}
-
+        }
+    
         private void label6_Click(object sender, EventArgs e)
         {
 
@@ -256,6 +313,66 @@ namespace Test_Lab_System
         {
             check();
         }
+
+        private void ReportDate_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PatientID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            PatientID.MaxLength = 8;
+
+        }
+
+        private void PatientName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            PatientName.MaxLength = 20;
+        }
+
+        private void PatientAge_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            PatientAge.MaxLength = 2;
+
+
+        }
+
+        private void PhysicianName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            PhysicianName.MaxLength = 20;
+        }
+        //        public void NotifyTest()
+        //      {
+        //int i = 0;
+        //foreach (Observer observer in observers)
+        //{
+        //  i++;
+        // Console.WriteLine("Notifying");
+        //}
+        //System.Windows.Forms.MessageBox.Show("new test");
+
+        //    }
     }
 }
 

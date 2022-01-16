@@ -31,21 +31,19 @@
             System.Windows.Forms.Panel panel3;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(patient));
             this.panel7 = new System.Windows.Forms.Panel();
+            this.Lbl_EmergencyPhoneError = new System.Windows.Forms.Label();
             this.Lbl_GenderError = new System.Windows.Forms.Label();
-            this.Lbl_EmergencyNameError = new System.Windows.Forms.Label();
             this.Lbl_NationalIDError = new System.Windows.Forms.Label();
             this.Lbl_BloodTypeError = new System.Windows.Forms.Label();
-            this.Lbl_MotherNameError = new System.Windows.Forms.Label();
+            this.Lbl_EmailError = new System.Windows.Forms.Label();
             this.Lbl_LNameError = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.Lbl_AddressError = new System.Windows.Forms.Label();
+            this.Lbl_EmergencyRelationshipError = new System.Windows.Forms.Label();
             this.Lbl_MaritalStatusError = new System.Windows.Forms.Label();
-            this.Lbl_JobError = new System.Windows.Forms.Label();
+            this.Lbl_MotherNameError = new System.Windows.Forms.Label();
             this.Lbl_MobileNumberError = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.EmergencyRelationship = new System.Windows.Forms.TextBox();
-            this.Home = new System.Windows.Forms.TextBox();
-            this.EmergencyPhone = new System.Windows.Forms.TextBox();
             this.Email = new System.Windows.Forms.TextBox();
             this.Job = new System.Windows.Forms.TextBox();
             this.Nationality = new System.Windows.Forms.TextBox();
@@ -57,10 +55,18 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.LastName = new System.Windows.Forms.TextBox();
             this.BloodType = new System.Windows.Forms.ComboBox();
-            this.InsuranceNumber = new System.Windows.Forms.TextBox();
-            this.PatientGender = new System.Windows.Forms.TextBox();
-            this.MaritalStatus = new System.Windows.Forms.TextBox();
             this.MotherName = new System.Windows.Forms.TextBox();
+            this.DOB = new System.Windows.Forms.DateTimePicker();
+            this.MaritalStatus = new System.Windows.Forms.ComboBox();
+            this.EmergencyPhone = new System.Windows.Forms.TextBox();
+            this.EmergencyName = new System.Windows.Forms.TextBox();
+            this.EmergencyRelationship = new System.Windows.Forms.TextBox();
+            this.Home = new System.Windows.Forms.TextBox();
+            this.PatientGender = new System.Windows.Forms.ComboBox();
+            this.Lbl_InsurancePhoneError = new System.Windows.Forms.Label();
+            this.Lbl_JobError = new System.Windows.Forms.Label();
+            this.InsuranceNumber = new System.Windows.Forms.TextBox();
+            this.Lbl_EmergencyNameError = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -74,29 +80,27 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.Lbl_PatientIDError = new System.Windows.Forms.Label();
             this.Lbl_HomeError = new System.Windows.Forms.Label();
-            this.Lbl_EmergencyRelationshipError = new System.Windows.Forms.Label();
             this.Lbl_AgeError = new System.Windows.Forms.Label();
-            this.Lbl_EmailError = new System.Windows.Forms.Label();
             this.LblNationality_Error = new System.Windows.Forms.Label();
             this.Lbl_FNameError = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.EmergencyName = new System.Windows.Forms.TextBox();
             this.InsuranceCompany = new System.Windows.Forms.TextBox();
             this.SubscriberName = new System.Windows.Forms.TextBox();
             this.InsuranceAddress = new System.Windows.Forms.TextBox();
             this.Lbl_IDError = new System.Windows.Forms.Label();
-            this.DOB = new System.Windows.Forms.DateTimePicker();
             panel3 = new System.Windows.Forms.Panel();
             panel3.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel11.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -118,17 +122,26 @@
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.Lbl_EmergencyPhoneError);
             this.panel7.Controls.Add(this.Lbl_GenderError);
-            this.panel7.Controls.Add(this.Lbl_EmergencyNameError);
             this.panel7.Controls.Add(this.Lbl_NationalIDError);
             this.panel7.Controls.Add(this.Lbl_BloodTypeError);
-            this.panel7.Controls.Add(this.Lbl_MotherNameError);
+            this.panel7.Controls.Add(this.Lbl_EmailError);
             this.panel7.Controls.Add(this.Lbl_LNameError);
             this.panel7.Location = new System.Drawing.Point(448, 0);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(52, 266);
             this.panel7.TabIndex = 7;
             this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
+            // 
+            // Lbl_EmergencyPhoneError
+            // 
+            this.Lbl_EmergencyPhoneError.AutoSize = true;
+            this.Lbl_EmergencyPhoneError.Location = new System.Drawing.Point(5, 210);
+            this.Lbl_EmergencyPhoneError.Name = "Lbl_EmergencyPhoneError";
+            this.Lbl_EmergencyPhoneError.Size = new System.Drawing.Size(10, 13);
+            this.Lbl_EmergencyPhoneError.TabIndex = 19;
+            this.Lbl_EmergencyPhoneError.Text = " ";
             // 
             // Lbl_GenderError
             // 
@@ -138,15 +151,6 @@
             this.Lbl_GenderError.Size = new System.Drawing.Size(10, 13);
             this.Lbl_GenderError.TabIndex = 19;
             this.Lbl_GenderError.Text = " ";
-            // 
-            // Lbl_EmergencyNameError
-            // 
-            this.Lbl_EmergencyNameError.AutoSize = true;
-            this.Lbl_EmergencyNameError.Location = new System.Drawing.Point(5, 203);
-            this.Lbl_EmergencyNameError.Name = "Lbl_EmergencyNameError";
-            this.Lbl_EmergencyNameError.Size = new System.Drawing.Size(10, 13);
-            this.Lbl_EmergencyNameError.TabIndex = 18;
-            this.Lbl_EmergencyNameError.Text = " ";
             // 
             // Lbl_NationalIDError
             // 
@@ -166,14 +170,14 @@
             this.Lbl_BloodTypeError.TabIndex = 14;
             this.Lbl_BloodTypeError.Text = " ";
             // 
-            // Lbl_MotherNameError
+            // Lbl_EmailError
             // 
-            this.Lbl_MotherNameError.AutoSize = true;
-            this.Lbl_MotherNameError.Location = new System.Drawing.Point(2, 163);
-            this.Lbl_MotherNameError.Name = "Lbl_MotherNameError";
-            this.Lbl_MotherNameError.Size = new System.Drawing.Size(10, 13);
-            this.Lbl_MotherNameError.TabIndex = 22;
-            this.Lbl_MotherNameError.Text = " ";
+            this.Lbl_EmailError.AutoSize = true;
+            this.Lbl_EmailError.Location = new System.Drawing.Point(5, 170);
+            this.Lbl_EmailError.Name = "Lbl_EmailError";
+            this.Lbl_EmailError.Size = new System.Drawing.Size(10, 13);
+            this.Lbl_EmailError.TabIndex = 8;
+            this.Lbl_EmailError.Text = " ";
             // 
             // Lbl_LNameError
             // 
@@ -187,8 +191,9 @@
             // panel6
             // 
             this.panel6.Controls.Add(this.Lbl_AddressError);
+            this.panel6.Controls.Add(this.Lbl_EmergencyRelationshipError);
             this.panel6.Controls.Add(this.Lbl_MaritalStatusError);
-            this.panel6.Controls.Add(this.Lbl_JobError);
+            this.panel6.Controls.Add(this.Lbl_MotherNameError);
             this.panel6.Controls.Add(this.Lbl_MobileNumberError);
             this.panel6.Location = new System.Drawing.Point(700, 0);
             this.panel6.Name = "panel6";
@@ -199,34 +204,43 @@
             // Lbl_AddressError
             // 
             this.Lbl_AddressError.AutoSize = true;
-            this.Lbl_AddressError.Location = new System.Drawing.Point(3, 40);
+            this.Lbl_AddressError.Location = new System.Drawing.Point(9, 40);
             this.Lbl_AddressError.Name = "Lbl_AddressError";
             this.Lbl_AddressError.Size = new System.Drawing.Size(10, 13);
             this.Lbl_AddressError.TabIndex = 25;
             this.Lbl_AddressError.Text = " ";
             // 
+            // Lbl_EmergencyRelationshipError
+            // 
+            this.Lbl_EmergencyRelationshipError.AutoSize = true;
+            this.Lbl_EmergencyRelationshipError.Location = new System.Drawing.Point(12, 210);
+            this.Lbl_EmergencyRelationshipError.Name = "Lbl_EmergencyRelationshipError";
+            this.Lbl_EmergencyRelationshipError.Size = new System.Drawing.Size(10, 13);
+            this.Lbl_EmergencyRelationshipError.TabIndex = 10;
+            this.Lbl_EmergencyRelationshipError.Text = " ";
+            // 
             // Lbl_MaritalStatusError
             // 
             this.Lbl_MaritalStatusError.AutoSize = true;
-            this.Lbl_MaritalStatusError.Location = new System.Drawing.Point(3, 84);
+            this.Lbl_MaritalStatusError.Location = new System.Drawing.Point(9, 84);
             this.Lbl_MaritalStatusError.Name = "Lbl_MaritalStatusError";
             this.Lbl_MaritalStatusError.Size = new System.Drawing.Size(10, 13);
             this.Lbl_MaritalStatusError.TabIndex = 23;
             this.Lbl_MaritalStatusError.Text = " ";
             // 
-            // Lbl_JobError
+            // Lbl_MotherNameError
             // 
-            this.Lbl_JobError.AutoSize = true;
-            this.Lbl_JobError.Location = new System.Drawing.Point(3, 163);
-            this.Lbl_JobError.Name = "Lbl_JobError";
-            this.Lbl_JobError.Size = new System.Drawing.Size(10, 13);
-            this.Lbl_JobError.TabIndex = 15;
-            this.Lbl_JobError.Text = " ";
+            this.Lbl_MotherNameError.AutoSize = true;
+            this.Lbl_MotherNameError.Location = new System.Drawing.Point(9, 170);
+            this.Lbl_MotherNameError.Name = "Lbl_MotherNameError";
+            this.Lbl_MotherNameError.Size = new System.Drawing.Size(10, 13);
+            this.Lbl_MotherNameError.TabIndex = 22;
+            this.Lbl_MotherNameError.Text = " ";
             // 
             // Lbl_MobileNumberError
             // 
             this.Lbl_MobileNumberError.AutoSize = true;
-            this.Lbl_MobileNumberError.Location = new System.Drawing.Point(3, 3);
+            this.Lbl_MobileNumberError.Location = new System.Drawing.Point(9, 9);
             this.Lbl_MobileNumberError.Name = "Lbl_MobileNumberError";
             this.Lbl_MobileNumberError.Size = new System.Drawing.Size(10, 13);
             this.Lbl_MobileNumberError.TabIndex = 20;
@@ -237,10 +251,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.60159F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.39841F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 267F));
-            this.tableLayoutPanel1.Controls.Add(this.EmergencyRelationship, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.Home, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.EmergencyPhone, 0, 5);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 272F));
             this.tableLayoutPanel1.Controls.Add(this.Email, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.Job, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.Nationality, 0, 3);
@@ -252,11 +263,14 @@
             this.tableLayoutPanel1.Controls.Add(this.textBox1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.LastName, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.BloodType, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.InsuranceNumber, 2, 5);
-            this.tableLayoutPanel1.Controls.Add(this.PatientGender, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.MaritalStatus, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.MotherName, 2, 4);
             this.tableLayoutPanel1.Controls.Add(this.DOB, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.MaritalStatus, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.EmergencyPhone, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.EmergencyName, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.EmergencyRelationship, 2, 5);
+            this.tableLayoutPanel1.Controls.Add(this.Home, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.PatientGender, 1, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
@@ -272,56 +286,27 @@
             this.tableLayoutPanel1.TabIndex = 4;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
-            // EmergencyRelationship
-            // 
-            this.EmergencyRelationship.BackColor = System.Drawing.Color.White;
-            this.EmergencyRelationship.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmergencyRelationship.Location = new System.Drawing.Point(3, 234);
-            this.EmergencyRelationship.Name = "EmergencyRelationship";
-            this.EmergencyRelationship.Size = new System.Drawing.Size(173, 20);
-            this.EmergencyRelationship.TabIndex = 18;
-            this.EmergencyRelationship.Text = "Emergency Relationship";
-            // 
-            // Home
-            // 
-            this.Home.BackColor = System.Drawing.Color.White;
-            this.Home.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home.Location = new System.Drawing.Point(3, 200);
-            this.Home.Name = "Home";
-            this.Home.Size = new System.Drawing.Size(173, 20);
-            this.Home.TabIndex = 17;
-            this.Home.Text = "Home";
-            this.Home.TextChanged += new System.EventHandler(this.textBox18_TextChanged);
-            // 
-            // EmergencyPhone
-            // 
-            this.EmergencyPhone.BackColor = System.Drawing.Color.White;
-            this.EmergencyPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmergencyPhone.Location = new System.Drawing.Point(246, 200);
-            this.EmergencyPhone.Name = "EmergencyPhone";
-            this.EmergencyPhone.Size = new System.Drawing.Size(173, 20);
-            this.EmergencyPhone.TabIndex = 15;
-            this.EmergencyPhone.Text = "Emergency Phone";
-            // 
             // Email
             // 
             this.Email.BackColor = System.Drawing.Color.White;
             this.Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Email.Location = new System.Drawing.Point(3, 160);
+            this.Email.Location = new System.Drawing.Point(244, 160);
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(173, 20);
             this.Email.TabIndex = 14;
             this.Email.Text = "Email";
+            this.Email.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Email_KeyPress);
             // 
             // Job
             // 
             this.Job.BackColor = System.Drawing.Color.White;
             this.Job.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Job.Location = new System.Drawing.Point(246, 160);
+            this.Job.Location = new System.Drawing.Point(3, 160);
             this.Job.Name = "Job";
             this.Job.Size = new System.Drawing.Size(173, 20);
             this.Job.TabIndex = 13;
             this.Job.Text = "Job";
+            this.Job.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Job_KeyPress);
             // 
             // Nationality
             // 
@@ -332,6 +317,7 @@
             this.Nationality.Size = new System.Drawing.Size(173, 20);
             this.Nationality.TabIndex = 9;
             this.Nationality.Text = "Nationality";
+            this.Nationality.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Nationality_KeyPress);
             // 
             // FirstName
             // 
@@ -344,6 +330,7 @@
             this.FirstName.TabIndex = 0;
             this.FirstName.Text = "First Name";
             this.FirstName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.FirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Fname_keypress);
             // 
             // PatientAge
             // 
@@ -361,21 +348,23 @@
             // 
             this.NationalID.BackColor = System.Drawing.Color.White;
             this.NationalID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NationalID.Location = new System.Drawing.Point(246, 78);
+            this.NationalID.Location = new System.Drawing.Point(244, 78);
             this.NationalID.Name = "NationalID";
             this.NationalID.Size = new System.Drawing.Size(173, 20);
             this.NationalID.TabIndex = 5;
             this.NationalID.Text = "National ID";
+            this.NationalID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NationalIDKeyPress);
             // 
             // MobileNumber
             // 
             this.MobileNumber.BackColor = System.Drawing.Color.White;
             this.MobileNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MobileNumber.Location = new System.Drawing.Point(493, 3);
+            this.MobileNumber.Location = new System.Drawing.Point(488, 3);
             this.MobileNumber.Name = "MobileNumber";
             this.MobileNumber.Size = new System.Drawing.Size(173, 20);
             this.MobileNumber.TabIndex = 6;
             this.MobileNumber.Text = "Mobile Number";
+            this.MobileNumber.Click += new System.EventHandler(this.MobileNumber_TextChanged);
             this.MobileNumber.TextChanged += new System.EventHandler(this.MobileNumber_TextChanged);
             this.MobileNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mobile_keypress);
             // 
@@ -383,11 +372,12 @@
             // 
             this.Address.BackColor = System.Drawing.Color.White;
             this.Address.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Address.Location = new System.Drawing.Point(493, 38);
+            this.Address.Location = new System.Drawing.Point(488, 38);
             this.Address.Name = "Address";
             this.Address.Size = new System.Drawing.Size(173, 20);
             this.Address.TabIndex = 7;
             this.Address.Text = "Address";
+            this.Address.TextChanged += new System.EventHandler(this.Address_TextChanged);
             this.Address.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Address_keypress);
             // 
             // textBox1
@@ -399,14 +389,15 @@
             this.textBox1.Size = new System.Drawing.Size(173, 20);
             this.textBox1.TabIndex = 19;
             this.textBox1.Text = "PatientID";
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Fname_keypress);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PatientID_keypress);
+            this.textBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp);
             // 
             // LastName
             // 
             this.LastName.BackColor = System.Drawing.Color.White;
             this.LastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LastName.ForeColor = System.Drawing.Color.Black;
-            this.LastName.Location = new System.Drawing.Point(246, 3);
+            this.LastName.Location = new System.Drawing.Point(244, 3);
             this.LastName.Name = "LastName";
             this.LastName.Size = new System.Drawing.Size(173, 20);
             this.LastName.TabIndex = 1;
@@ -426,52 +417,149 @@
             "O-",
             "AB+",
             "AB-"});
-            this.BloodType.Location = new System.Drawing.Point(246, 119);
+            this.BloodType.Location = new System.Drawing.Point(244, 119);
             this.BloodType.Name = "BloodType";
             this.BloodType.Size = new System.Drawing.Size(173, 21);
             this.BloodType.TabIndex = 22;
             this.BloodType.Text = "Blood Type";
             // 
-            // InsuranceNumber
-            // 
-            this.InsuranceNumber.BackColor = System.Drawing.Color.White;
-            this.InsuranceNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InsuranceNumber.Location = new System.Drawing.Point(493, 200);
-            this.InsuranceNumber.Name = "InsuranceNumber";
-            this.InsuranceNumber.Size = new System.Drawing.Size(173, 20);
-            this.InsuranceNumber.TabIndex = 23;
-            this.InsuranceNumber.Text = "InsuranceNumber";
-            // 
-            // PatientGender
-            // 
-            this.PatientGender.BackColor = System.Drawing.Color.White;
-            this.PatientGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PatientGender.Location = new System.Drawing.Point(246, 38);
-            this.PatientGender.Name = "PatientGender";
-            this.PatientGender.Size = new System.Drawing.Size(173, 20);
-            this.PatientGender.TabIndex = 24;
-            this.PatientGender.Text = "PatientGender";
-            // 
-            // MaritalStatus
-            // 
-            this.MaritalStatus.BackColor = System.Drawing.Color.White;
-            this.MaritalStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaritalStatus.Location = new System.Drawing.Point(493, 78);
-            this.MaritalStatus.MaxLength = 10;
-            this.MaritalStatus.Name = "MaritalStatus";
-            this.MaritalStatus.Size = new System.Drawing.Size(173, 20);
-            this.MaritalStatus.TabIndex = 8;
-            this.MaritalStatus.Text = "Marital Status";
-            // 
             // MotherName
             // 
             this.MotherName.BackColor = System.Drawing.Color.White;
             this.MotherName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MotherName.Location = new System.Drawing.Point(493, 160);
+            this.MotherName.Location = new System.Drawing.Point(488, 160);
             this.MotherName.Name = "MotherName";
             this.MotherName.Size = new System.Drawing.Size(173, 20);
             this.MotherName.TabIndex = 12;
             this.MotherName.Text = "Mother Name";
+            this.MotherName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MotherNameKeyPress);
+            // 
+            // DOB
+            // 
+            this.DOB.CalendarFont = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DOB.CalendarForeColor = System.Drawing.Color.Purple;
+            this.DOB.CalendarMonthBackground = System.Drawing.Color.Red;
+            this.DOB.CalendarTitleBackColor = System.Drawing.Color.Red;
+            this.DOB.CalendarTitleForeColor = System.Drawing.Color.Red;
+            this.DOB.CalendarTrailingForeColor = System.Drawing.Color.Red;
+            this.DOB.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DOB.Location = new System.Drawing.Point(490, 121);
+            this.DOB.Margin = new System.Windows.Forms.Padding(5);
+            this.DOB.Name = "DOB";
+            this.DOB.Size = new System.Drawing.Size(171, 21);
+            this.DOB.TabIndex = 31;
+            this.DOB.Value = new System.DateTime(2022, 1, 11, 0, 0, 0, 0);
+            // 
+            // MaritalStatus
+            // 
+            this.MaritalStatus.FormattingEnabled = true;
+            this.MaritalStatus.Items.AddRange(new object[] {
+            "Single",
+            "Engaged",
+            "Married"});
+            this.MaritalStatus.Location = new System.Drawing.Point(488, 78);
+            this.MaritalStatus.Name = "MaritalStatus";
+            this.MaritalStatus.Size = new System.Drawing.Size(173, 21);
+            this.MaritalStatus.TabIndex = 32;
+            this.MaritalStatus.Text = "Marital Status";
+            this.MaritalStatus.SelectedIndexChanged += new System.EventHandler(this.MaritalStatus_SelectedIndexChanged);
+            this.MaritalStatus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MaritalStatus_KeyPress);
+            // 
+            // EmergencyPhone
+            // 
+            this.EmergencyPhone.BackColor = System.Drawing.Color.White;
+            this.EmergencyPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmergencyPhone.Location = new System.Drawing.Point(244, 200);
+            this.EmergencyPhone.Name = "EmergencyPhone";
+            this.EmergencyPhone.Size = new System.Drawing.Size(173, 20);
+            this.EmergencyPhone.TabIndex = 15;
+            this.EmergencyPhone.Text = "Emergency Phone";
+            this.EmergencyPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EmergencyPhone_KeyPress);
+            // 
+            // EmergencyName
+            // 
+            this.EmergencyName.BackColor = System.Drawing.Color.White;
+            this.EmergencyName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmergencyName.Location = new System.Drawing.Point(3, 200);
+            this.EmergencyName.Name = "EmergencyName";
+            this.EmergencyName.Size = new System.Drawing.Size(173, 20);
+            this.EmergencyName.TabIndex = 24;
+            this.EmergencyName.Text = "Emergency Name";
+            this.EmergencyName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EmergencyName_KeyPress);
+            // 
+            // EmergencyRelationship
+            // 
+            this.EmergencyRelationship.BackColor = System.Drawing.Color.White;
+            this.EmergencyRelationship.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmergencyRelationship.Location = new System.Drawing.Point(488, 200);
+            this.EmergencyRelationship.Name = "EmergencyRelationship";
+            this.EmergencyRelationship.Size = new System.Drawing.Size(173, 20);
+            this.EmergencyRelationship.TabIndex = 18;
+            this.EmergencyRelationship.Text = "Emergency Relationship";
+            this.EmergencyRelationship.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EmergencyRelationship_KeyPress);
+            // 
+            // Home
+            // 
+            this.Home.BackColor = System.Drawing.Color.White;
+            this.Home.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home.Location = new System.Drawing.Point(3, 234);
+            this.Home.Name = "Home";
+            this.Home.Size = new System.Drawing.Size(173, 20);
+            this.Home.TabIndex = 17;
+            this.Home.Text = "Home";
+            this.Home.TextChanged += new System.EventHandler(this.textBox18_TextChanged);
+            this.Home.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Home_KeyPress);
+            // 
+            // PatientGender
+            // 
+            this.PatientGender.FormattingEnabled = true;
+            this.PatientGender.Items.AddRange(new object[] {
+            "Female",
+            "Male"});
+            this.PatientGender.Location = new System.Drawing.Point(244, 38);
+            this.PatientGender.Name = "PatientGender";
+            this.PatientGender.Size = new System.Drawing.Size(173, 21);
+            this.PatientGender.TabIndex = 33;
+            this.PatientGender.Text = "Patient Gender";
+            // 
+            // Lbl_InsurancePhoneError
+            // 
+            this.Lbl_InsurancePhoneError.AutoSize = true;
+            this.Lbl_InsurancePhoneError.Location = new System.Drawing.Point(3, 14);
+            this.Lbl_InsurancePhoneError.Name = "Lbl_InsurancePhoneError";
+            this.Lbl_InsurancePhoneError.Size = new System.Drawing.Size(10, 13);
+            this.Lbl_InsurancePhoneError.TabIndex = 26;
+            this.Lbl_InsurancePhoneError.Text = " ";
+            // 
+            // Lbl_JobError
+            // 
+            this.Lbl_JobError.AutoSize = true;
+            this.Lbl_JobError.Location = new System.Drawing.Point(5, 170);
+            this.Lbl_JobError.Name = "Lbl_JobError";
+            this.Lbl_JobError.Size = new System.Drawing.Size(10, 13);
+            this.Lbl_JobError.TabIndex = 15;
+            this.Lbl_JobError.Text = " ";
+            // 
+            // InsuranceNumber
+            // 
+            this.InsuranceNumber.BackColor = System.Drawing.Color.White;
+            this.InsuranceNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InsuranceNumber.Location = new System.Drawing.Point(575, 3);
+            this.InsuranceNumber.Name = "InsuranceNumber";
+            this.InsuranceNumber.Size = new System.Drawing.Size(101, 20);
+            this.InsuranceNumber.TabIndex = 23;
+            this.InsuranceNumber.Text = "InsuranceNumber";
+            this.InsuranceNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InsuranceNumber_KeyPress);
+            // 
+            // Lbl_EmergencyNameError
+            // 
+            this.Lbl_EmergencyNameError.AutoSize = true;
+            this.Lbl_EmergencyNameError.Location = new System.Drawing.Point(7, 203);
+            this.Lbl_EmergencyNameError.Name = "Lbl_EmergencyNameError";
+            this.Lbl_EmergencyNameError.Size = new System.Drawing.Size(10, 13);
+            this.Lbl_EmergencyNameError.TabIndex = 18;
+            this.Lbl_EmergencyNameError.Text = " ";
             // 
             // panel1
             // 
@@ -495,6 +583,7 @@
             // 
             // panel11
             // 
+            this.panel11.Controls.Add(this.Lbl_InsurancePhoneError);
             this.panel11.Location = new System.Drawing.Point(705, 350);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(54, 43);
@@ -573,10 +662,10 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.Lbl_PatientIDError);
+            this.panel4.Controls.Add(this.Lbl_EmergencyNameError);
             this.panel4.Controls.Add(this.Lbl_HomeError);
-            this.panel4.Controls.Add(this.Lbl_EmergencyRelationshipError);
+            this.panel4.Controls.Add(this.Lbl_JobError);
             this.panel4.Controls.Add(this.Lbl_AgeError);
-            this.panel4.Controls.Add(this.Lbl_EmailError);
             this.panel4.Controls.Add(this.LblNationality_Error);
             this.panel4.Controls.Add(this.Lbl_FNameError);
             this.panel4.Location = new System.Drawing.Point(205, 40);
@@ -597,20 +686,11 @@
             // Lbl_HomeError
             // 
             this.Lbl_HomeError.AutoSize = true;
-            this.Lbl_HomeError.Location = new System.Drawing.Point(4, 204);
+            this.Lbl_HomeError.Location = new System.Drawing.Point(5, 237);
             this.Lbl_HomeError.Name = "Lbl_HomeError";
             this.Lbl_HomeError.Size = new System.Drawing.Size(10, 13);
             this.Lbl_HomeError.TabIndex = 11;
             this.Lbl_HomeError.Text = " ";
-            // 
-            // Lbl_EmergencyRelationshipError
-            // 
-            this.Lbl_EmergencyRelationshipError.AutoSize = true;
-            this.Lbl_EmergencyRelationshipError.Location = new System.Drawing.Point(6, 237);
-            this.Lbl_EmergencyRelationshipError.Name = "Lbl_EmergencyRelationshipError";
-            this.Lbl_EmergencyRelationshipError.Size = new System.Drawing.Size(10, 13);
-            this.Lbl_EmergencyRelationshipError.TabIndex = 10;
-            this.Lbl_EmergencyRelationshipError.Text = " ";
             // 
             // Lbl_AgeError
             // 
@@ -620,15 +700,6 @@
             this.Lbl_AgeError.Size = new System.Drawing.Size(10, 13);
             this.Lbl_AgeError.TabIndex = 9;
             this.Lbl_AgeError.Text = " ";
-            // 
-            // Lbl_EmailError
-            // 
-            this.Lbl_EmailError.AutoSize = true;
-            this.Lbl_EmailError.Location = new System.Drawing.Point(5, 163);
-            this.Lbl_EmailError.Name = "Lbl_EmailError";
-            this.Lbl_EmailError.Size = new System.Drawing.Size(10, 13);
-            this.Lbl_EmailError.TabIndex = 8;
-            this.Lbl_EmailError.Text = " ";
             // 
             // LblNationality_Error
             // 
@@ -662,6 +733,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
@@ -670,6 +742,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(773, 88);
             this.panel2.TabIndex = 0;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(528, 62);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 10;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -708,10 +790,10 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.02439F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 162F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 207F));
-            this.tableLayoutPanel2.Controls.Add(this.EmergencyName, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.InsuranceCompany, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.SubscriberName, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.InsuranceAddress, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.InsuranceNumber, 3, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
@@ -720,16 +802,6 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(779, 43);
             this.tableLayoutPanel2.TabIndex = 5;
-            // 
-            // EmergencyName
-            // 
-            this.EmergencyName.BackColor = System.Drawing.Color.White;
-            this.EmergencyName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmergencyName.Location = new System.Drawing.Point(575, 3);
-            this.EmergencyName.Name = "EmergencyName";
-            this.EmergencyName.Size = new System.Drawing.Size(98, 20);
-            this.EmergencyName.TabIndex = 24;
-            this.EmergencyName.Text = "EmergencyName";
             // 
             // InsuranceCompany
             // 
@@ -740,6 +812,7 @@
             this.InsuranceCompany.Size = new System.Drawing.Size(151, 20);
             this.InsuranceCompany.TabIndex = 0;
             this.InsuranceCompany.Text = "Insurance Company";
+            this.InsuranceCompany.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InsuranceCompany_KeyPress);
             // 
             // SubscriberName
             // 
@@ -750,6 +823,7 @@
             this.SubscriberName.Size = new System.Drawing.Size(143, 20);
             this.SubscriberName.TabIndex = 7;
             this.SubscriberName.Text = "Subscriber Name";
+            this.SubscriberName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SunscriberNameKeyPress);
             // 
             // InsuranceAddress
             // 
@@ -760,6 +834,7 @@
             this.InsuranceAddress.Size = new System.Drawing.Size(100, 20);
             this.InsuranceAddress.TabIndex = 1;
             this.InsuranceAddress.Text = "Insurance Address";
+            this.InsuranceAddress.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InsuranceAddress_KeyPress);
             // 
             // Lbl_IDError
             // 
@@ -767,23 +842,6 @@
             this.Lbl_IDError.Name = "Lbl_IDError";
             this.Lbl_IDError.Size = new System.Drawing.Size(100, 23);
             this.Lbl_IDError.TabIndex = 0;
-            // 
-            // DOB
-            // 
-            this.DOB.CalendarFont = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DOB.CalendarForeColor = System.Drawing.Color.Purple;
-            this.DOB.CalendarMonthBackground = System.Drawing.Color.Red;
-            this.DOB.CalendarTitleBackColor = System.Drawing.Color.Red;
-            this.DOB.CalendarTitleForeColor = System.Drawing.Color.Red;
-            this.DOB.CalendarTrailingForeColor = System.Drawing.Color.Red;
-            this.DOB.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DOB.Location = new System.Drawing.Point(495, 121);
-            this.DOB.Margin = new System.Windows.Forms.Padding(5);
-            this.DOB.Name = "DOB";
-            this.DOB.Size = new System.Drawing.Size(102, 21);
-            this.DOB.TabIndex = 31;
-            this.DOB.Value = new System.DateTime(2022, 1, 11, 0, 0, 0, 0);
             // 
             // patient
             // 
@@ -793,7 +851,7 @@
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(805, 447);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.Name = "patient";
@@ -808,6 +866,8 @@
             this.tableLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             this.panel8.ResumeLayout(false);
@@ -850,7 +910,6 @@
         private System.Windows.Forms.TextBox NationalID;
         private System.Windows.Forms.TextBox MobileNumber;
         private System.Windows.Forms.TextBox Address;
-        private System.Windows.Forms.TextBox MaritalStatus;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label Lbl_IDError;
         private System.Windows.Forms.Button button3;
@@ -885,8 +944,12 @@
         private System.Windows.Forms.Label Lbl_MaritalStatusError;
         private System.Windows.Forms.TextBox InsuranceNumber;
         private System.Windows.Forms.TextBox EmergencyName;
-        private System.Windows.Forms.TextBox PatientGender;
         private System.Windows.Forms.DateTimePicker DOB;
+        private System.Windows.Forms.Label Lbl_EmergencyPhoneError;
+        private System.Windows.Forms.Label Lbl_InsurancePhoneError;
+        private System.Windows.Forms.ComboBox MaritalStatus;
+        private System.Windows.Forms.ComboBox PatientGender;
+        private System.Windows.Forms.Button button4;
     }
 }
 

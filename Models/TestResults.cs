@@ -15,12 +15,13 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Test_Lab_System
 {
-    internal class TESTPAYMENT : TESTS
+    internal class TestResults : TESTS
     {
         [Required]
-        public string TransactionNumber { get; set; }
+        public string TestResultsID { get; set; }
         [Required]
-        public string TotalPayment { get; set; }
+        public string Results { get; set; }
+        [Required]
+        public string TestPrice { get; set; }
     }
 }
-

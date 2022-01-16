@@ -16,8 +16,9 @@ using System.ComponentModel.DataAnnotations;
 namespace Test_Lab_System.Models
 {
     internal class Employee
-    { 
-        //[Required(ErrorMessage = "ID is required")]
+    {
+        [Required]
+        [RegularExpression(@"(1)[0-9]{7}", ErrorMessage = "Invalid\nInput")]
         public string EmployeeID { get; set; }
         //[StringLength(10)]
         //[RegularExpression(@"^([A-Z][a-z-A-z]+)$", ErrorMessage = "Please enter a valid Name")]

@@ -15,6 +15,10 @@ namespace Test_Lab_System
 {
     public partial class TestPayment : Form
     {
+        MySqlConnection connection = new MySqlConnection("DataSource=localhost;database=testlabsystem;uid=root;pwd=123456789");
+        MySqlCommand command;
+        MySqlDataAdapter adapter;
+        DataTable table;
         public TestPayment()
         {
             InitializeComponent();
@@ -37,9 +41,6 @@ namespace Test_Lab_System
 
         private void button2_Click(object sender, EventArgs e)
         {
-         //this.Hide();
-         //CBCtest C = new CBCtest(AppDate.Text, ReportDate.Text, PhysicianName.Text, PatientName.Text, PatientID.Text, PatientAge.Text);
-         //C.Show();
         }
 
         private void Menu_Click(object sender, EventArgs e)
@@ -48,38 +49,53 @@ namespace Test_Lab_System
             SignIn C = new SignIn();
             C.Show();
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            TESTPAYMENT testpayment = new TESTPAYMENT();
-            testpayment.TestName = textBox1.Text;
-            //testpayment.TransactionNumber = PatientID.Text;
-            testpayment.PatientID = PatientID.Text;
-            testpayment.TotalPayment = Address.Text;
-            MySqlConnection conn = new MySqlConnection("server=localhost;database=testlabsystem;uid=root;pwd=123456789");
-            MySqlCommand cmd = null;
-            //string cmdString = "";
-            conn.Open();
-            string cmdString = ";";
-           
-            cmd = new MySqlCommand(cmdString, conn);
 
-            cmd.Parameters.Add("@param1", MySqlDbType.VarChar);
-            cmd.Parameters["@param1"].Value = Registration.TransactionNumber.ToString();
-            cmd.Parameters.Add("@param2", MySqlDbType.VarChar);
-            cmd.Parameters["@param2"].Value = Registration.TotalPayment.ToString(); ;
-            MySqlDataAdapter adp = new MySqlDataAdapter();
-            adp.InsertCommand = cmd;
-            adp.InsertCommand.ExecuteNonQuery();
-            MessageBox.Show("Data Stored Successfully");
+        }
+        public void searchData(string valueToSearch, string valueToSearch2)
+        {
+             string query = "SELECT * FROM TESTS WHERE CONCAT (PatientID,ReportDate) like '%" + valueToSearch + valueToSearch2 + "%'";
+            
+            command = new MySqlCommand(query, connection);
+            adapter = new MySqlDataAdapter(command);
+            table = new DataTable();
+            adapter.Fill(table);
+            dataGridView1.DataSource = table;
+            if (dataGridView1.Rows.Count > 1)
+             {
 
-            AddAppointment obj = new AddAppointment(textBox1.Text);
-            obj.Show();
+
+                MessageBox.Show("Report Date or Patient ID are valid.");
+                int firstRowIndex = dataGridView1.SelectedRows.Count - 1;
+                string cell = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                textBox4.Text = cell;
+
+            }
+            else
+            {
+                MessageBox.Show("Report Date and Patient ID is incorrect,please try again!");
+                
+                PatientID.Clear();
+                
+                PatientID.Focus();
+               
+
+
+            }
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
+        
 
+
+
+
+        private void button2_Click_2(object sender, EventArgs e)
+        {
+            string valueToSearch = PatientID.Text.ToString();
+            string valueToSearch2 = dateTimePicker1.Text.ToString();
+
+            searchData(valueToSearch, valueToSearch2);
         }
     }
 }
